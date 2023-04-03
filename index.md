@@ -25,7 +25,6 @@
 - [X] Park, C.S., 2019. Fundamentals of Engineering Economics, Global Edition, 4th ed. Pearson.
 - [X] Sullivan, W.G., Wicks, E.M., Koelling, C.P., 2019. Engineering Economy, 17th ed. Pearson Education.
 
-
 ## Data Structures and Algorithms
 
 - [ ] Cormen, T.H., Leiserson, C.E., Rivest, R.L., Stein, C., 2022. Introduction to Algorithms, 4th ed. The MIT Press.
