@@ -1,0 +1,11 @@
+{
+    // vscode editor
+    // "editor.formatOnSave": true,
+    "editor.wordWrap": "on",
+  
+    // gitlens
+    "gitlens.currentLine.enabled": false,
+    // "gitlens.codeLens.authors.enabled": false,
+    "gitlens.codeLens.enabled": false,
+  
+  }
