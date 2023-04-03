@@ -23,5 +23,3 @@
 
 - [ ] Cormen, T.H., Leiserson, C.E., Rivest, R.L., Stein, C., 2022. Introduction to Algorithms, 4th ed. The MIT Press.
 - [ ] Goldwasser, M.H., Tamassia, R., Goodrich, M.T., 2018. Data Structures and Algorithms in Python. John Wiley & Sons.
-- [ ] Cormen, T.H., Leiserson, C.E., Rivest, R.L., Stein, C., 2022. Introduction to Algorithms, 4th ed. The MIT Press.
-- [ ] Goldwasser, M.H., Tamassia, R., Goodrich, M.T., 2018. Data Structures and Algorithms in Python. John Wiley & Sons.
