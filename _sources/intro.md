@@ -1,4 +1,4 @@
-# Welcome to Hakuna's NoteBook
+# Hakuna's NoteBook
 
 ```{tableofcontents}
 ```
