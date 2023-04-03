@@ -1,5 +1,18 @@
 # Home
 
-- [X] Wooldridge, J.M., 2019. Introductory Econometrics: A Modern Approach, 7th ed. Cengage Learning.
+- [ ] Wooldridge, J.M., 2019. Introductory Econometrics: A Modern Approach, 7th ed, MindTap Course List. Cengage Learning.
+- [ ] Greene, W.H., 2019. Econometric Analysis Global Edition, 8th ed. Pearson-prentice Hall.
+- [ ] Wooldridge, J.M., 2011. Econometric Analysis of Cross Section and Panel Data, 2nd ed. ed. MIT Press.
+- [ ] Angrist, J.D., Pischke, J.-S., 2008. Mostly Harmless Econometrics: An Empiricist’s Companion.
 
+---
+
+- [ ] Mankiw, N.G., 2020. Principles of Economics, 9th edition. ed. Cengage Learning, Boston, MA.
+- [ ] Samuelson, P., Nordhaus, W., 2009. Economics, 19th edition. ed. McGraw Hill, Boston.
+
+---
+
+- [ ] Stewart, J., Clegg, D.K., Watson, S., 2020. Calculus, 9th ed. Cengage Learning.
+- [ ] Strang, G., 2016. Introduction to Linear Algebra, 5th ed. Wellesley-Cambridge Press, Wellesley.
 - [ ] Casella, G., Berger, R.L., 2001. Statistical Inference, 2nd ed. Duxbury Press.
+- [ ] Golub, G.H., Loan, C.F.V., 2013. Matrix Computations, 4th ed, Johns Hopkins Studies in the Mathematical Sciences, volume 3. Johns Hopkins University Press.
