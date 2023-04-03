@@ -3,8 +3,11 @@
 
 format: jb-book
 root: intro
+options:
+  numbered: true
 parts:
   - caption: Statistical Inference
     chapters:
     - file: notes/stat_infer/00_index
-    - file: notes/stat_infer/01_prob_theory
+      sections:
+      - file: notes/stat_infer/01_prob_theory
