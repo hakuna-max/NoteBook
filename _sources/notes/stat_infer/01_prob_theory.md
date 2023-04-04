@@ -39,6 +39,7 @@ $$
 **Theorem**: For any three events, $A, B, C$, defined on a sample space $S$,
 
 a. Commutativity:
+
 $$
     A \cup B = B \cup A \\
     A \cap B = B \cap A
@@ -65,9 +66,9 @@ $$
     (A \cap B)^c =  A^c \cup B^c \\
 $$
 
-***Disjoint (or Mutually exclusive)***: Two events $A$ and $B$ are disjoint (or mutually exclusive) if $A \cap B = \empty$. The events $A_1, A_2, \dots$ are pairwise disjoint (or mutually exclusive) if $A_i \cap A_j = \empty$ for all $i = j$.
+***Disjoint (or Mutually exclusive)***: Two events $A$ and $B$ are disjoint (or mutually exclusive) if $A \cap B = \emptyset$. The events $A_1, A_2, \dots$ are pairwise disjoint (or mutually exclusive) if $A_i \cap A_j = \emptyset$ for all $i = j$.
 
-***Partition***: If $A_1, A_2, \dots$ are pairwise disjoint and $\cup_{i=1}^\infin A_i = S$, then the
+***Partition***: If $A_1, A_2, \dots$ are pairwise disjoint and $\cup_{i=1}^\infty A_i = S$, then the
 collection $A_1, A_2, \dots$ forms a partition of S.
 
 ````{margin}
