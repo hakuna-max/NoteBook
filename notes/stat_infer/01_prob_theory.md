@@ -69,7 +69,7 @@ $$
 ***Disjoint (or Mutually exclusive)***: Two events $A$ and $B$ are disjoint (or mutually exclusive) if $A \cap B = \emptyset$. The events $A_1, A_2, \dots$ are pairwise disjoint (or mutually exclusive) if $A_i \cap A_j = \emptyset$ for all $i = j$.
 
 ***Partition***: If $A_1, A_2, \dots$ are pairwise disjoint and $\cup_{i=1}^\infty A_i = S$, then the
-collection $A_1, A_2, \dots$ forms a partition of S.
+collection $A_1, A_2, \dots$ forms a partition of $S$.
 
 ````{margin}
 ```{note}
