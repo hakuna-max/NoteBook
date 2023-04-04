@@ -11,7 +11,7 @@ $
     A \subset B \Leftrightarrow x \in A \rightarrow x \in B
 $
 
-***Equality***
+***Equality***:
 $
     A = B \Leftrightarrow A \subset B~\text{and}~B \subset A
 $
