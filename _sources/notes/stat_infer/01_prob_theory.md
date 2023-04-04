@@ -6,27 +6,27 @@
 
 ***Event***: An event is any collection of possible outcomes of an experiment, that is, any subset of S (including S itself).
 
-**Containment**:
+***Containment***:
 $
     A \subset B \Leftrightarrow x \in A \rightarrow x \in B
 $
 
-**Equality**
+***Equality***
 $
     A = B \Leftrightarrow A \subset B~\text{and}~B \subset A
 $
 
-**Union**:
+***Union***:
 $
 A \cup B = \{x: x \in A~\text{or}~x \in B\}
 $
 
-**Intersection**:
+***Intersection***:
 $
     A \cap B = \{x: x \in A~\text{and} ~x \in B\}
 $
 
-**Complementation**: 
+***Complementation***: 
 $
     A^c = \{x: x \notin A\}
 $
