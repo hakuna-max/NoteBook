@@ -7,34 +7,29 @@
 ***Event***: An event is any collection of possible outcomes of an experiment, that is, any subset of S (including S itself).
 
 **Containment**:
-
-$$
+$
     A \subset B \Leftrightarrow x \in A \rightarrow x \in B
-$$
+$
 
 **Equality**
-
-$$
+$
     A = B \Leftrightarrow A \subset B~\text{and}~B \subset A
-$$
+$
 
 **Union**:
-
-$$
+$
 A \cup B = {x: x \in A~\text{or}~x \in B}
-$$
+$
 
 **Intersection**:
-
-$$
+$
     A \cap B = {x: x \in A~\text{and} ~x \in B}
-$$
+$
 
 **Complementation**: 
-
-$$
+$
     A^c = {x: x \notin A}
-$$
+$
 
 **Theorem**: For any three events, $A, B, C$, defined on a sample space $S$,
 
