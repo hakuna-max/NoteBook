@@ -381,6 +381,66 @@ document.write(`
 <section id="set-theory">
 <h2>Set Theory<a class="headerlink" href="#set-theory" title="Permalink to this heading">#</a></h2>
 <p><em><strong>Sample space</strong></em>: The set, <span class="math notranslate nohighlight">\(S\)</span>, of all possible outcomes of a particular experiment is called the sample space for the experiment.</p>
+<p><em><strong>Event</strong></em>: An event is any collection of possible outcomes of an experiment, that is, any subset of S (including S itself).</p>
+<p><strong>Containment</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+    A \subset B \Leftrightarrow x \in A \rightarrow x \in B
+\]</div>
+<p><strong>Equality</strong></p>
+<div class="math notranslate nohighlight">
+\[
+    A = B \Leftrightarrow A \subset B~\text{and}~B \subset A
+\]</div>
+<p><strong>Union</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+A \cup B = {x: x \in A~\text{or}~x \in B}
+\]</div>
+<p><strong>Intersection</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+    A \cap B = {x: x \in A~\text{and} ~x \in B}
+\]</div>
+<p><strong>Complementation</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+    A^c = {x: x \notin A}
+\]</div>
+<p><strong>Theorem</strong>: For any three events, <span class="math notranslate nohighlight">\(A, B, C\)</span>, defined on a sample space <span class="math notranslate nohighlight">\(S\)</span>,</p>
+<p>a. Commutativity:
+$<span class="math notranslate nohighlight">\(
+    A \cup B = B \cup A \\
+    A \cap B = B \cap A
+\)</span>$</p>
+<p>b. Associativity:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    A \cup (B \cup C) = (A \cup B) \cup C \\
+    A \cap (B \cap C) = (A \cap B) \cap C
+\end{split}\]</div>
+<p>c. Distributive Laws:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    A \cap (B \cup C) = (A \cap B) \cup (A \cap C) \\
+    A \cup (B \cap C) = (A \cup B) \cap (A \cup C) \\
+\end{split}\]</div>
+<p>d. DeMorgan’s Laws:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    (A \cup B)^c =  A^c \cap B^c \\
+    (A \cap B)^c =  A^c \cup B^c \\
+\end{split}\]</div>
+<p><em><strong>Disjoint (or Mutually exclusive)</strong></em>: Two events <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are disjoint (or mutually exclusive) if <span class="math notranslate nohighlight">\(A \cap B = \empty\)</span>. The events <span class="math notranslate nohighlight">\(A_1, A_2, \dots\)</span> are pairwise disjoint (or mutually exclusive) if <span class="math notranslate nohighlight">\(A_i \cap A_j = \empty\)</span> for all <span class="math notranslate nohighlight">\(i = j\)</span>.</p>
+<p><em><strong>Partition</strong></em>: If <span class="math notranslate nohighlight">\(A_1, A_2, \dots\)</span> are pairwise disjoint and <span class="math notranslate nohighlight">\(\cup_{i=1}^\infin A_i = S\)</span>, then the
+collection <span class="math notranslate nohighlight">\(A_1, A_2, \dots\)</span> forms a partition of S.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Partitions allows us to divide the sample space into small, nonoverlapping pieces.</p>
+</div>
+</aside>
 </section>
 <section id="basics-of-probability-theory">
 <h2>Basics of Probability Theory<a class="headerlink" href="#basics-of-probability-theory" title="Permalink to this heading">#</a></h2>
@@ -424,7 +484,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./notes/stat_infer"
+            path: "./notes\stat_infer"
         },
         predefinedOutput: true
     }
