@@ -7,34 +7,29 @@
 ***Event***: An event is any collection of possible outcomes of an experiment, that is, any subset of S (including S itself).
 
 **Containment**:
-
-$$
+$
     A \subset B \Leftrightarrow x \in A \rightarrow x \in B
-$$
+$
 
 **Equality**
-
-$$
+$
     A = B \Leftrightarrow A \subset B~\text{and}~B \subset A
-$$
+$
 
 **Union**:
-
-$$
+$
 A \cup B = {x: x \in A~\text{or}~x \in B}
-$$
+$
 
 **Intersection**:
-
-$$
+$
     A \cap B = {x: x \in A~\text{and} ~x \in B}
-$$
+$
 
 **Complementation**: 
-
-$$
+$
     A^c = {x: x \notin A}
-$$
+$
 
 **Theorem**: For any three events, $A, B, C$, defined on a sample space $S$,
 
@@ -69,7 +64,7 @@ $$
 ***Disjoint (or Mutually exclusive)***: Two events $A$ and $B$ are disjoint (or mutually exclusive) if $A \cap B = \emptyset$. The events $A_1, A_2, \dots$ are pairwise disjoint (or mutually exclusive) if $A_i \cap A_j = \emptyset$ for all $i = j$.
 
 ***Partition***: If $A_1, A_2, \dots$ are pairwise disjoint and $\cup_{i=1}^\infty A_i = S$, then the
-collection $A_1, A_2, \dots$ forms a partition of S.
+collection $A_1, A_2, \dots$ forms a partition of $S$.
 
 ````{margin}
 ```{note}
