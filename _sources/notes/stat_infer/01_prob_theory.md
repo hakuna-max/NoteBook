@@ -108,10 +108,14 @@ $$
 2. $P(A) \leq 1$;
 3. $P(A^c) = 1 − P(A)$.
 
-**Theorem**: If $P$ is a probability function and $A$ and $B$ are any sets in $B$, then
+**Theorem**: If $P$ is a probability function and $A$ and $B$ are any sets in $\mathcal{B}$, then
 1. $P(B \cap A^c) = P(B) − P(A \cap B)$;
 2. $P(A \cup B) = P(A) + P(B) − P(A \cup B)$;
 3. If $A \subset B$, then $P(A) \leq P(B)$.
+
+**Theorem 1.2.11** If $P$ is a probability function, then
+1. $P(A) = \sum_{i=1}^\infty P(A \cap C_i)$ for any partition $C_1, C_2, \dots$
+2. $P(\cup_{i=1}^\infty A_i) \leq \sum_{i=1}^\infty P(A_i)$ for any sets $A_1, A_2, \dots$ (Bool's Inequality)
    
 ### Axiomatic Foundations
 
