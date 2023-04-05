@@ -451,9 +451,9 @@ collection <span class="math notranslate nohighlight">\(A_1, A_2, \dots\)</span>
 </ul>
 <p><em><strong>Probability function</strong></em>: Given a sample space <span class="math notranslate nohighlight">\(S\)</span> and an associated sigma algebra <span class="math notranslate nohighlight">\(\mathcal{B}\)</span>, a probability function is a function <span class="math notranslate nohighlight">\(P\)</span> with domain <span class="math notranslate nohighlight">\(\mathcal{B}\)</span> that satisfies</p>
 <ol class="arabic simple">
-<li><p><span class="math notranslate nohighlight">\(P(A) \gep 0\)</span> for all <span class="math notranslate nohighlight">\(A \in \mathcal{B}.\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(P(A) \geq 0\)</span> for all <span class="math notranslate nohighlight">\(A \in \mathcal{B}.\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(P(S) = 1\)</span></p></li>
-<li><p>If <span class="math notranslate nohighlight">\(A_1, A_2, \dots \in  \mathcal{B}\)</span> are pairwise disjoint, then <span class="math notranslate nohighlight">\(P(\cap_{i=1}^\infty A_i = \sum_{i=1}^\infty P(A_i)\)</span></p></li>
+<li><p>If <span class="math notranslate nohighlight">\(A_1, A_2, \dots \in  \mathcal{B}\)</span> are pairwise disjoint, then <span class="math notranslate nohighlight">\(P(\cup_{i=1}^\infty A_i) = \sum_{i=1}^\infty P(A_i)\)</span></p></li>
 </ol>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
@@ -461,11 +461,16 @@ collection <span class="math notranslate nohighlight">\(A_1, A_2, \dots\)</span>
 <p class="admonition-title">Note</p>
 <ul class="simple">
 <li><p>The three properties given abvoe are usually referred to as <em>the Axioms of Probability</em> (or the Kolmogorov Axioms, after A. Kolmogorov, one of the fathers of probability theory)</p></li>
-<li><p>Any function <span class="math notranslate nohighlight">\(P\)</span> that satisfies the Axioms of Probability is called
-a probability function.</p></li>
+<li><p>Any function <span class="math notranslate nohighlight">\(P\)</span> that satisfies the Axioms of Probability is called a probability function.</p></li>
 </ul>
 </div>
 </aside>
+<p><strong>Theorem</strong>: Let <span class="math notranslate nohighlight">\(S = \{s_1, \dots, s_n\}\)</span> be a finite set. Let <span class="math notranslate nohighlight">\(\mathcal{B}\)</span> be any sigma algebra of subsets of <span class="math notranslate nohighlight">\(S\)</span>. Let <span class="math notranslate nohighlight">\(p_1, \dots, p_n\)</span> be nonnegative numbers that sum to 1. For any <span class="math notranslate nohighlight">\(A \in \mathcal{B}\)</span>, define <span class="math notranslate nohighlight">\(P(A)\)</span> by</p>
+<div class="math notranslate nohighlight">
+\[
+    P(A) = \sum_{\{i: s_i \in A\}} p_i
+\]</div>
+<p>(The sum over an empty set is defined to be 0.) Then <span class="math notranslate nohighlight">\(P\)</span> is a probability function on <span class="math notranslate nohighlight">\(\mathcal{B}\)</span>. This remains true if <span class="math notranslate nohighlight">\(S = \{s_1, s_2, \dots\}\)</span> is a countable set.</p>
 <section id="axiomatic-foundations">
 <h3>Axiomatic Foundations<a class="headerlink" href="#axiomatic-foundations" title="Permalink to this heading">#</a></h3>
 </section>
