@@ -61,9 +61,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notes/stat_infer/01_prob_theory';</script>
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="prev" title="Home" href="../../index.html" />
@@ -376,60 +375,56 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="probability-theory">
+  <section id="probability-theory">
 <h1>Probability Theory<a class="headerlink" href="#probability-theory" title="Permalink to this heading">#</a></h1>
 <section id="set-theory">
 <h2>Set Theory<a class="headerlink" href="#set-theory" title="Permalink to this heading">#</a></h2>
-<p><em><strong>Sample space</strong></em>: The set, <span class="math notranslate nohighlight">\(S\)</span>, of all possible outcomes of a particular experiment is called the sample space for the experiment.</p>
+<p><em><strong>Sample space</strong></em>: The set, $S$, of all possible outcomes of a particular experiment is called the sample space for the experiment.</p>
 <p><em><strong>Event</strong></em>: An event is any collection of possible outcomes of an experiment, that is, any subset of S (including S itself).</p>
 <p><em><strong>Containment</strong></em>:
-<span class="math notranslate nohighlight">\(
-    A \subset B \Leftrightarrow x \in A \rightarrow x \in B
-\)</span></p>
-<p><em><strong>Equality</strong></em>
-<span class="math notranslate nohighlight">\(
-    A = B \Leftrightarrow A \subset B~\text{and}~B \subset A
-\)</span></p>
+$
+A \subset B \Leftrightarrow x \in A \rightarrow x \in B
+$</p>
+<p><em><strong>Equality</strong></em>:
+$
+A = B \Leftrightarrow A \subset B~\text{and}~B \subset A
+$</p>
 <p><em><strong>Union</strong></em>:
-<span class="math notranslate nohighlight">\(
-A \cup B = \{x: x \in A~\text{or}~x \in B\}
-\)</span></p>
+$
+A \cup B = {x: x \in A~\text{or}~x \in B}
+$</p>
 <p><em><strong>Intersection</strong></em>:
-<span class="math notranslate nohighlight">\(
-    A \cap B = \{x: x \in A~\text{and} ~x \in B\}
-\)</span></p>
+$
+A \cap B = {x: x \in A~\text{and} ~x \in B}
+$</p>
 <p><em><strong>Complementation</strong></em>:
-<span class="math notranslate nohighlight">\(
-    A^c = \{x: x \notin A\}
-\)</span></p>
-<p><strong>Theorem</strong>: For any three events, <span class="math notranslate nohighlight">\(A, B, C\)</span>, defined on a sample space <span class="math notranslate nohighlight">\(S\)</span>,</p>
+$
+A^c = {x: x \notin A}
+$</p>
+<p><strong>Theorem</strong>: For any three events, $A, B, C$, defined on a sample space $S$,</p>
 <p>a. Commutativity:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-    A \cup B = B \cup A \\
-    A \cap B = B \cap A
-\end{split}\]</div>
+<p>$$
+A \cup B = B \cup A \
+A \cap B = B \cap A
+$$</p>
 <p>b. Associativity:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-    A \cup (B \cup C) = (A \cup B) \cup C \\
-    A \cap (B \cap C) = (A \cap B) \cap C
-\end{split}\]</div>
+<p>$$
+A \cup (B \cup C) = (A \cup B) \cup C \
+A \cap (B \cap C) = (A \cap B) \cap C
+$$</p>
 <p>c. Distributive Laws:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-    A \cap (B \cup C) = (A \cap B) \cup (A \cap C) \\
-    A \cup (B \cap C) = (A \cup B) \cap (A \cup C) \\
-\end{split}\]</div>
+<p>$$
+A \cap (B \cup C) = (A \cap B) \cup (A \cap C) \
+A \cup (B \cap C) = (A \cup B) \cap (A \cup C) \
+$$</p>
 <p>d. DeMorgan’s Laws:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-    (A \cup B)^c =  A^c \cap B^c \\
-    (A \cap B)^c =  A^c \cup B^c \\
-\end{split}\]</div>
-<p><em><strong>Disjoint (or Mutually exclusive)</strong></em>: Two events <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are disjoint (or mutually exclusive) if <span class="math notranslate nohighlight">\(A \cap B = \emptyset\)</span>. The events <span class="math notranslate nohighlight">\(A_1, A_2, \dots\)</span> are pairwise disjoint (or mutually exclusive) if <span class="math notranslate nohighlight">\(A_i \cap A_j = \emptyset\)</span> for all <span class="math notranslate nohighlight">\(i = j\)</span>.</p>
-<p><em><strong>Partition</strong></em>: If <span class="math notranslate nohighlight">\(A_1, A_2, \dots\)</span> are pairwise disjoint and <span class="math notranslate nohighlight">\(\cup_{i=1}^\infty A_i = S\)</span>, then the
-collection <span class="math notranslate nohighlight">\(A_1, A_2, \dots\)</span> forms a partition of <span class="math notranslate nohighlight">\(S\)</span>.</p>
+<p>$$
+(A \cup B)^c =  A^c \cap B^c \
+(A \cap B)^c =  A^c \cup B^c \
+$$</p>
+<p><em><strong>Disjoint (or Mutually exclusive)</strong></em>: Two events $A$ and $B$ are disjoint (or mutually exclusive) if $A \cap B = \emptyset$. The events $A_1, A_2, \dots$ are pairwise disjoint (or mutually exclusive) if $A_i \cap A_j = \emptyset$ for all $i = j$.</p>
+<p><em><strong>Partition</strong></em>: If $A_1, A_2, \dots$ are pairwise disjoint and $\cup_{i=1}^\infty A_i = S$, then the
+collection $A_1, A_2, \dots$ forms a partition of $S$.</p>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <div class="admonition note">
@@ -560,7 +555,7 @@ By Hakuna
     
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2022-2023.
       <br/>
     
   </p>
