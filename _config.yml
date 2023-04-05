@@ -3,6 +3,7 @@
 
 title: Notebooks
 author: Hakuna
+copyright: 2022-2023
 logo: logo.png
 
 
@@ -30,12 +31,13 @@ repository:
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
+  favicon: favicon.png
   use_issues_button: true
   use_repository_button: true
   use_multitoc_numbering: false
 
 parse:
-myst_enable_extensions:
-  # don't forget to list any other extensions you want enabled,
-  # including those that are enabled by default!
-  - amsmath
+  myst_enable_extensions:
+    # don't forget to list any other extensions you want enabled,
+    # including those that are enabled by default!
+    - amsmath
