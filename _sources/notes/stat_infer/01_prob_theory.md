@@ -84,17 +84,24 @@ For each event $A$ in the sample space $S$ we want to associate with $A$ a numbe
 - If $A_1, A_2, \dots \in \mathcal{B}$, then $\cup_{i=1}^\infty A_i \in \mathcal{B}$ ($\mathcal{B}$ is closed under countable unions)
 
 ***Probability function***: Given a sample space $S$ and an associated sigma algebra $\mathcal{B}$, a probability function is a function $P$ with domain $\mathcal{B}$ that satisfies
-1. $P(A) \gep 0$ for all $A \in \mathcal{B}.$
+1. $P(A) \geq 0$ for all $A \in \mathcal{B}.$
 2. $P(S) = 1$
-3. If $A_1, A_2, \dots \in  \mathcal{B}$ are pairwise disjoint, then $P(\cap_{i=1}^\infty A_i = \sum_{i=1}^\infty P(A_i)$
+3. If $A_1, A_2, \dots \in  \mathcal{B}$ are pairwise disjoint, then $P(\cup_{i=1}^\infty A_i) = \sum_{i=1}^\infty P(A_i)$
 
 ````{margin}
 ```{note}
 - The three properties given abvoe are usually referred to as *the Axioms of Probability* (or the Kolmogorov Axioms, after A. Kolmogorov, one of the fathers of probability theory)
-- Any function $P$ that satisfies the Axioms of Probability is called
-a probability function.
+- Any function $P$ that satisfies the Axioms of Probability is called a probability function.
 ```
 ````
+
+**Theorem**: Let $S = \{s_1, \dots, s_n\}$ be a finite set. Let $\mathcal{B}$ be any sigma algebra of subsets of $S$. Let $p_1, \dots, p_n$ be nonnegative numbers that sum to 1. For any $A \in \mathcal{B}$, define $P(A)$ by
+
+$$
+    P(A) = \sum_{\{i: s_i \in A\}} p_i
+$$
+
+(The sum over an empty set is defined to be 0.) Then $P$ is a probability function on $\mathcal{B}$. This remains true if $S = \{s_1, s_2, \dots\}$ is a countable set.
 
 ### Axiomatic Foundations
 
