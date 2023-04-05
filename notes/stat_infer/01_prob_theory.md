@@ -108,7 +108,7 @@ $$
 2. $P(A) \leq 1$;
 3. $P(A^c) = 1 − P(A)$.
 
-**Theorem**: If $P$ is a probability function and $A$ and $B$ are any sets in $B$, then
+**Theorem**: If $P$ is a probability function and $A$ and $B$ are any sets in $\mathcal{B}$, then
 1. $P(B \cap A^c) = P(B) − P(A \cap B)$;
 2. $P(A \cup B) = P(A) + P(B) − P(A \cup B)$;
 3. If $A \subset B$, then $P(A) \leq P(B)$.
