@@ -429,8 +429,6 @@ A \cup B = \{x: x \in A~\text{or}~x \in B\}
     (A \cap B)^c =  A^c \cup B^c \\
 \end{split}\]</div>
 <p><em><strong>Disjoint (or Mutually exclusive)</strong></em>: Two events <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are disjoint (or mutually exclusive) if <span class="math notranslate nohighlight">\(A \cap B = \emptyset\)</span>. The events <span class="math notranslate nohighlight">\(A_1, A_2, \dots\)</span> are pairwise disjoint (or mutually exclusive) if <span class="math notranslate nohighlight">\(A_i \cap A_j = \emptyset\)</span> for all <span class="math notranslate nohighlight">\(i = j\)</span>.</p>
-<p><em><strong>Partition</strong></em>: If <span class="math notranslate nohighlight">\(A_1, A_2, \dots\)</span> are pairwise disjoint and <span class="math notranslate nohighlight">\(\cup_{i=1}^\infty A_i = S\)</span>, then the
-collection <span class="math notranslate nohighlight">\(A_1, A_2, \dots\)</span> forms a partition of <span class="math notranslate nohighlight">\(S\)</span>.</p>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <div class="admonition note">
@@ -438,6 +436,8 @@ collection <span class="math notranslate nohighlight">\(A_1, A_2, \dots\)</span>
 <p>Partitions allows us to divide the sample space into small, nonoverlapping pieces.</p>
 </div>
 </aside>
+<p><em><strong>Partition</strong></em>: If <span class="math notranslate nohighlight">\(A_1, A_2, \dots\)</span> are pairwise disjoint and <span class="math notranslate nohighlight">\(\cup_{i=1}^\infty A_i = S\)</span>, then the
+collection <span class="math notranslate nohighlight">\(A_1, A_2, \dots\)</span> forms a partition of <span class="math notranslate nohighlight">\(S\)</span>.</p>
 </section>
 <section id="basics-of-probability-theory">
 <h2>Basics of Probability Theory<a class="headerlink" href="#basics-of-probability-theory" title="Permalink to this heading">#</a></h2>
@@ -449,12 +449,6 @@ collection <span class="math notranslate nohighlight">\(A_1, A_2, \dots\)</span>
 <li><p>If <span class="math notranslate nohighlight">\(\mathcal{A} \in \mathcal{B}\)</span>, then  <span class="math notranslate nohighlight">\(\mathcal{A}^c \in \mathcal{B}\)</span> (<span class="math notranslate nohighlight">\(\mathcal{B}\)</span> is closed under complementation).</p></li>
 <li><p>If <span class="math notranslate nohighlight">\(A_1, A_2, \dots \in \mathcal{B}\)</span>, then <span class="math notranslate nohighlight">\(\cup_{i=1}^\infty A_i \in \mathcal{B}\)</span> (<span class="math notranslate nohighlight">\(\mathcal{B}\)</span> is closed under countable unions)</p></li>
 </ul>
-<p><em><strong>Probability function</strong></em>: Given a sample space <span class="math notranslate nohighlight">\(S\)</span> and an associated sigma algebra <span class="math notranslate nohighlight">\(\mathcal{B}\)</span>, a probability function is a function <span class="math notranslate nohighlight">\(P\)</span> with domain <span class="math notranslate nohighlight">\(\mathcal{B}\)</span> that satisfies</p>
-<ol class="arabic simple">
-<li><p><span class="math notranslate nohighlight">\(P(A) \geq 0\)</span> for all <span class="math notranslate nohighlight">\(A \in \mathcal{B}.\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(P(S) = 1\)</span></p></li>
-<li><p>If <span class="math notranslate nohighlight">\(A_1, A_2, \dots \in  \mathcal{B}\)</span> are pairwise disjoint, then <span class="math notranslate nohighlight">\(P(\cup_{i=1}^\infty A_i) = \sum_{i=1}^\infty P(A_i)\)</span></p></li>
-</ol>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <div class="admonition note">
@@ -465,6 +459,12 @@ collection <span class="math notranslate nohighlight">\(A_1, A_2, \dots\)</span>
 </ul>
 </div>
 </aside>
+<p><em><strong>Probability function</strong></em>: Given a sample space <span class="math notranslate nohighlight">\(S\)</span> and an associated sigma algebra <span class="math notranslate nohighlight">\(\mathcal{B}\)</span>, a probability function is a function <span class="math notranslate nohighlight">\(P\)</span> with domain <span class="math notranslate nohighlight">\(\mathcal{B}\)</span> that satisfies</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(P(A) \geq 0\)</span> for all <span class="math notranslate nohighlight">\(A \in \mathcal{B}.\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(P(S) = 1\)</span></p></li>
+<li><p>If <span class="math notranslate nohighlight">\(A_1, A_2, \dots \in  \mathcal{B}\)</span> are pairwise disjoint, then <span class="math notranslate nohighlight">\(P(\cup_{i=1}^\infty A_i) = \sum_{i=1}^\infty P(A_i)\)</span></p></li>
+</ol>
 <p><strong>Theorem</strong>: Let <span class="math notranslate nohighlight">\(S = \{s_1, \dots, s_n\}\)</span> be a finite set. Let <span class="math notranslate nohighlight">\(\mathcal{B}\)</span> be any sigma algebra of subsets of <span class="math notranslate nohighlight">\(S\)</span>. Let <span class="math notranslate nohighlight">\(p_1, \dots, p_n\)</span> be nonnegative numbers that sum to 1. For any <span class="math notranslate nohighlight">\(A \in \mathcal{B}\)</span>, define <span class="math notranslate nohighlight">\(P(A)\)</span> by</p>
 <div class="math notranslate nohighlight">
 \[
