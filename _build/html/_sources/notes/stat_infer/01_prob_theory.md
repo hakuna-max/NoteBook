@@ -103,6 +103,16 @@ $$
 
 (The sum over an empty set is defined to be 0.) Then $P$ is a probability function on $\mathcal{B}$. This remains true if $S = \{s_1, s_2, \dots\}$ is a countable set.
 
+**Theorem**: If $P$ is a probability function and $A$ is any set in $\mathcal{B}$, then
+1. $P(\emptyset) = 0$, where $\emptyset$ is the empty set;
+2. $P(A) \leq 1$;
+3. $P(A^c) = 1 − P(A)$.
+
+**Theorem**: If $P$ is a probability function and $A$ and $B$ are any sets in $B$, then
+1. $P(B \cap A^c) = P(B) − P(A \cap B)$;
+2. $P(A \cup B) = P(A) + P(B) − P(A \cup B)$;
+3. If $A \subset B$, then $P(A) \leq P(B)$.
+   
 ### Axiomatic Foundations
 
 ### The Calculus of Probabilities
