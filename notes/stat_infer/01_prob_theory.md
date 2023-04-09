@@ -144,9 +144,17 @@ $$
 
 **_Definition 1.3.2_**: If $A$ and $B$ are events in $S$, and $P(B) > 0$, then the conditional probability of $A$ given $B$, written $P(A|B)$, is
 
-$$
-    P(A|B) = \frac{P(A \cap B)}{P(B)}
-$$
+```{math}
+:label: eq-conditional probability
+P(A|B) = \frac{P(A \cap B)}{P(B)}
+```
+
+**Theorem 1.3.5** (Bayes’ Rule) Let $A1_, A_2, \dots$ be a partition of the sample space, and let $B$ be any set. Then, for each $i = 1, 2, \dots$,
+
+```{math}
+:label: eq-Baye's Rule
+P(A_i|B) = \frac{P(B|A_i)P(A_i)}{\sum_{j=1}^\infty P(B|A_j)P(A_j)}
+```
 
 ### Axiomatic Foundations
 
