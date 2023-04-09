@@ -1,6 +1,6 @@
 ---
-tags: 
-    - probability
+tags:
+  - probability
 ---
 
 # Probability Theory
@@ -127,6 +127,12 @@ $$
 1. $P(A) = \sum_{i=1}^\infty P(A \cap C_i)$ for any partition $C_1, C_2, \dots$
 2. $P(\cup_{i=1}^\infty A_i) \leq \sum_{i=1}^\infty P(A_i)$ for any sets $A_1, A_2, \dots$ (Bool's Inequality)
 
+### Axiomatic Foundations
+
+### The Calculus of Probabilities
+
+### Counting
+
 ````{margin}
 ```{note}
 **Theorem 1.2.14 is the Fundamental Theorem of Counting**
@@ -142,6 +148,8 @@ $$
 |  Ordered  | $\frac{n!}{(n-r)!}$ |         $n^r$         |
 | Unordered |   $\binom{n}{r}$    | $\binom{n + r -1}{r}$ |
 
+## Conditional Probability and Independence
+
 **_Definition 1.3.2_**: If $A$ and $B$ are events in $S$, and $P(B) > 0$, then the conditional probability of $A$ given $B$, written $P(A|B)$, is
 
 ```{math}
@@ -149,22 +157,33 @@ $$
 P(A|B) = \frac{P(A \cap B)}{P(B)}
 ```
 
-**Theorem 1.3.5** (Bayes’ Rule) Let $A1_, A_2, \dots$ be a partition of the sample space, and let $B$ be any set. Then, for each $i = 1, 2, \dots$,
+**Theorem 1.3.5** (Bayes’ Rule) Let $A_1, A_2, \dots$ be a partition of the sample space, and let $B$ be any set. Then, for each $i = 1, 2, \dots$,
 
 ```{math}
 :label: eq-Baye's Rule
 P(A_i|B) = \frac{P(B|A_i)P(A_i)}{\sum_{j=1}^\infty P(B|A_j)P(A_j)}
 ```
 
-### Axiomatic Foundations
+**_Definition 1.3.7_** Two events, $A$ and $B$, are statistically independent if
 
-### The Calculus of Probabilities
+```{math}
+:label: eq-statistically independent
+P(A \cap B) = P(A)P(B)
+```
 
-### Counting
+**Theorem 1.3.9** If $A$ and $B$ are independent events, then the following pairs are
+also independent:
 
-### Enumerating Outcomes
+1. $A$ and $B^c$,
+2. $A^c$ and $B$,
+3. $A^c$ and $B^c$
 
-## Conditional Probability and Independence
+**_Definition 1.3.12_** A collection of events $A_1, \dots, A_n$ are mutually independent if for any subcollection $A_i_1, \dots, A_i_k$, we have
+
+```{math}
+:label: eq-mutually independent
+P\left(\cap_{j=1}^k A_i_j\right) = \prod_{j=1}^k P(A_i_j)
+```
 
 ## Random Variables
 
