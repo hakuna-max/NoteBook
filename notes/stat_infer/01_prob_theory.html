@@ -381,25 +381,26 @@ document.write(`
 <h1>Probability Theory<a class="headerlink" href="#probability-theory" title="Permalink to this heading">#</a></h1>
 <section id="set-theory">
 <h2>Set Theory<a class="headerlink" href="#set-theory" title="Permalink to this heading">#</a></h2>
-<p><em><strong>Sample space</strong></em>: The set, <span class="math notranslate nohighlight">\(S\)</span>, of all possible outcomes of a particular experiment is called the sample space for the experiment.</p>
-<p><em><strong>Event</strong></em>: An event is any collection of possible outcomes of an experiment, that is, any subset of S (including S itself).</p>
-<p><em><strong>Containment</strong></em>:
+<p>Sample space
+: The set, <span class="math notranslate nohighlight">\(S\)</span>, of all possible outcomes of a particular experiment is called the sample space for the experiment.</p>
+<p><strong><em>Event</em></strong>: An event is any collection of possible outcomes of an experiment, that is, any subset of S (including S itself).</p>
+<p><strong><em>Containment</em></strong>:
 <span class="math notranslate nohighlight">\(
     A \subset B \Leftrightarrow x \in A \rightarrow x \in B
 \)</span></p>
-<p><em><strong>Equality</strong></em>:
+<p><strong><em>Equality</em></strong>:
 <span class="math notranslate nohighlight">\(
     A = B \Leftrightarrow A \subset B~\text{and}~B \subset A
 \)</span></p>
-<p><em><strong>Union</strong></em>:
+<p><strong><em>Union</em></strong>:
 <span class="math notranslate nohighlight">\(
 A \cup B = \{x: x \in A~\text{or}~x \in B\}
 \)</span></p>
-<p><em><strong>Intersection</strong></em>:
+<p><strong><em>Intersection</em></strong>:
 <span class="math notranslate nohighlight">\(
     A \cap B = \{x: x \in A~\text{and} ~x \in B\}
 \)</span></p>
-<p><em><strong>Complementation</strong></em>:
+<p><strong><em>Complementation</em></strong>:
 <span class="math notranslate nohighlight">\(
     A^c = \{x: x \notin A\}
 \)</span></p>
@@ -428,7 +429,7 @@ A \cup B = \{x: x \in A~\text{or}~x \in B\}
     (A \cup B)^c =  A^c \cap B^c \\
     (A \cap B)^c =  A^c \cup B^c \\
 \end{split}\]</div>
-<p><em><strong>Disjoint (or Mutually exclusive)</strong></em>: Two events <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are disjoint (or mutually exclusive) if <span class="math notranslate nohighlight">\(A \cap B = \emptyset\)</span>. The events <span class="math notranslate nohighlight">\(A_1, A_2, \dots\)</span> are pairwise disjoint (or mutually exclusive) if <span class="math notranslate nohighlight">\(A_i \cap A_j = \emptyset\)</span> for all <span class="math notranslate nohighlight">\(i = j\)</span>.</p>
+<p><strong><em>Disjoint (or Mutually exclusive)</em></strong>: Two events <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are disjoint (or mutually exclusive) if <span class="math notranslate nohighlight">\(A \cap B = \emptyset\)</span>. The events <span class="math notranslate nohighlight">\(A_1, A_2, \dots\)</span> are pairwise disjoint (or mutually exclusive) if <span class="math notranslate nohighlight">\(A_i \cap A_j = \emptyset\)</span> for all <span class="math notranslate nohighlight">\(i = j\)</span>.</p>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <div class="admonition note">
@@ -436,17 +437,17 @@ A \cup B = \{x: x \in A~\text{or}~x \in B\}
 <p>Partitions allows us to divide the sample space into small, nonoverlapping pieces.</p>
 </div>
 </aside>
-<p><em><strong>Partition</strong></em>: If <span class="math notranslate nohighlight">\(A_1, A_2, \dots\)</span> are pairwise disjoint and <span class="math notranslate nohighlight">\(\cup_{i=1}^\infty A_i = S\)</span>, then the
+<p><strong><em>Partition</em></strong>: If <span class="math notranslate nohighlight">\(A_1, A_2, \dots\)</span> are pairwise disjoint and <span class="math notranslate nohighlight">\(\cup_{i=1}^\infty A_i = S\)</span>, then the
 collection <span class="math notranslate nohighlight">\(A_1, A_2, \dots\)</span> forms a partition of <span class="math notranslate nohighlight">\(S\)</span>.</p>
 </section>
 <section id="basics-of-probability-theory">
 <h2>Basics of Probability Theory<a class="headerlink" href="#basics-of-probability-theory" title="Permalink to this heading">#</a></h2>
 <p>When an experiment is performed, <em>the realization of the experiment</em> is an outcome in the sample space.</p>
 <p>For each event <span class="math notranslate nohighlight">\(A\)</span> in the sample space <span class="math notranslate nohighlight">\(S\)</span> we want to associate with <span class="math notranslate nohighlight">\(A\)</span> a number between zero and one that will be called the probability of <span class="math notranslate nohighlight">\(A\)</span>, denoted by <span class="math notranslate nohighlight">\(P(A)\)</span>.</p>
-<p><em><strong>sigma algebra (or Borel field)</strong></em>: A collection of subsets of <span class="math notranslate nohighlight">\(S\)</span> is called a sigma algebra (or Borel field), denoted by <span class="math notranslate nohighlight">\(\mathcal{B}\)</span>, if it satisfies the following three properties:</p>
+<p><strong><em>sigma algebra (or Borel field)</em></strong>: A collection of subsets of <span class="math notranslate nohighlight">\(S\)</span> is called a sigma algebra (or Borel field), denoted by <span class="math notranslate nohighlight">\(\mathcal{B}\)</span>, if it satisfies the following three properties:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\emptyset \in \mathcal{B}\)</span> (the empty set is an element of <span class="math notranslate nohighlight">\(\mathcal{B}\)</span>)</p></li>
-<li><p>If <span class="math notranslate nohighlight">\(\mathcal{A} \in \mathcal{B}\)</span>, then  <span class="math notranslate nohighlight">\(\mathcal{A}^c \in \mathcal{B}\)</span> (<span class="math notranslate nohighlight">\(\mathcal{B}\)</span> is closed under complementation).</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(\mathcal{A} \in \mathcal{B}\)</span>, then <span class="math notranslate nohighlight">\(\mathcal{A}^c \in \mathcal{B}\)</span> (<span class="math notranslate nohighlight">\(\mathcal{B}\)</span> is closed under complementation).</p></li>
 <li><p>If <span class="math notranslate nohighlight">\(A_1, A_2, \dots \in \mathcal{B}\)</span>, then <span class="math notranslate nohighlight">\(\cup_{i=1}^\infty A_i \in \mathcal{B}\)</span> (<span class="math notranslate nohighlight">\(\mathcal{B}\)</span> is closed under countable unions)</p></li>
 </ul>
 <aside class="margin sidebar">
@@ -459,7 +460,7 @@ collection <span class="math notranslate nohighlight">\(A_1, A_2, \dots\)</span>
 </ul>
 </div>
 </aside>
-<p><em><strong>Probability function</strong></em>: Given a sample space <span class="math notranslate nohighlight">\(S\)</span> and an associated sigma algebra <span class="math notranslate nohighlight">\(\mathcal{B}\)</span>, a probability function is a function <span class="math notranslate nohighlight">\(P\)</span> with domain <span class="math notranslate nohighlight">\(\mathcal{B}\)</span> that satisfies</p>
+<p><strong><em>Probability function</em></strong>: Given a sample space <span class="math notranslate nohighlight">\(S\)</span> and an associated sigma algebra <span class="math notranslate nohighlight">\(\mathcal{B}\)</span>, a probability function is a function <span class="math notranslate nohighlight">\(P\)</span> with domain <span class="math notranslate nohighlight">\(\mathcal{B}\)</span> that satisfies</p>
 <ol class="arabic simple">
 <li><p><span class="math notranslate nohighlight">\(P(A) \geq 0\)</span> for all <span class="math notranslate nohighlight">\(A \in \mathcal{B}.\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(P(S) = 1\)</span></p></li>
@@ -488,6 +489,34 @@ collection <span class="math notranslate nohighlight">\(A_1, A_2, \dots\)</span>
 <li><p><span class="math notranslate nohighlight">\(P(A) = \sum_{i=1}^\infty P(A \cap C_i)\)</span> for any partition <span class="math notranslate nohighlight">\(C_1, C_2, \dots\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(P(\cup_{i=1}^\infty A_i) \leq \sum_{i=1}^\infty P(A_i)\)</span> for any sets <span class="math notranslate nohighlight">\(A_1, A_2, \dots\)</span> (Bool’s Inequality)</p></li>
 </ol>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Fundamental Theorem of Counting</strong></p>
+</div>
+</aside>
+<p><strong>Theorem 1.2.14</strong> If a job consists of <span class="math notranslate nohighlight">\(k\)</span> separate tasks, the <span class="math notranslate nohighlight">\(i\)</span>th of which can be done in <span class="math notranslate nohighlight">\(n_i\)</span> ways, <span class="math notranslate nohighlight">\(i = 1, \dots, k\)</span>, then the entire job can be done in <span class="math notranslate nohighlight">\(n_1 \times n_2 \times \dots \times n_k\)</span> ways.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p></p></th>
+<th class="head text-center"><p>Without replacement</p></th>
+<th class="head text-center"><p>With replacement</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>Ordered</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\frac{n!}{(n-r)!}\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(n^r\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Unordered</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\binom{n}{r}\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\binom{n + r -1}{r}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>term
+: definition</p>
 <section id="axiomatic-foundations">
 <h3>Axiomatic Foundations<a class="headerlink" href="#axiomatic-foundations" title="Permalink to this heading">#</a></h3>
 </section>
@@ -528,7 +557,7 @@ collection <span class="math notranslate nohighlight">\(A_1, A_2, \dots\)</span>
         },
         kernelOptions: {
             name: "python3",
-            path: "./notes\stat_infer"
+            path: "./notes/stat_infer"
         },
         predefinedOutput: true
     }
