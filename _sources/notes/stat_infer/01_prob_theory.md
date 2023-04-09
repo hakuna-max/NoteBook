@@ -1,9 +1,13 @@
+---
+tags: 
+    - probability
+---
+
 # Probability Theory
 
 ## Set Theory
 
-Sample space
-: The set, $S$, of all possible outcomes of a particular experiment is called the sample space for the experiment.
+**_Sample space_**: The set, $S$, of all possible outcomes of a particular experiment is called the sample space for the experiment.
 
 **_Event_**: An event is any collection of possible outcomes of an experiment, that is, any subset of S (including S itself).
 
@@ -125,19 +129,24 @@ $$
 
 ````{margin}
 ```{note}
-**Fundamental Theorem of Counting**
+**Theorem 1.2.14 is the Fundamental Theorem of Counting**
 ```
 ````
 
 **Theorem 1.2.14** If a job consists of $k$ separate tasks, the $i$th of which can be done in $n_i$ ways, $i = 1, \dots, k$, then the entire job can be done in $n_1 \times n_2 \times \dots \times n_k$ ways.
+
+<center>Table 1.2.1 Number of possible arrangements of size r from n objects</center>
 
 |           | Without replacement |   With replacement    |
 | :-------: | :-----------------: | :-------------------: |
 |  Ordered  | $\frac{n!}{(n-r)!}$ |         $n^r$         |
 | Unordered |   $\binom{n}{r}$    | $\binom{n + r -1}{r}$ |
 
-term
-: definition
+**_Definition 1.3.2_**: If $A$ and $B$ are events in $S$, and $P(B) > 0$, then the conditional probability of $A$ given $B$, written $P(A|B)$, is
+
+$$
+    P(A|B) = \frac{P(A \cap B)}{P(B)}
+$$
 
 ### Axiomatic Foundations
 
