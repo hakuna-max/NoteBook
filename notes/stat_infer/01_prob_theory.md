@@ -178,11 +178,11 @@ also independent:
 2. $A^c$ and $B$,
 3. $A^c$ and $B^c$
 
-**_Definition 1.3.12_** A collection of events $A_1, \dots, A_n$ are mutually independent if for any subcollection $A_i_1, \dots, A_i_k$, we have
+**_Definition 1.3.12_** A collection of events $A_1, \dots, A_n$ are mutually independent if for any subcollection $A_{i_1}, \dots, A_{i_k}$, we have
 
 ```{math}
 :label: eq-mutually independent
-P\left(\cap_{j=1}^k A_i_j\right) = \prod_{j=1}^k P(A_i_j)
+P\left(\cap_{j=1}^k A_{i_j}\right) = \prod_{j=1}^k P(A_{i_j})
 ```
 
 ## Random Variables
