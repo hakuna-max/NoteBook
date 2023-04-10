@@ -6,6 +6,8 @@ author: Hakuna
 copyright: 2022-2023
 logo: logo_ha.png
 
+analytics:
+  google_analytics_id: G-XZSZMK7B6G
 
 only_build_toc_files: true
 # Force re-execution of notebooks on each build.
