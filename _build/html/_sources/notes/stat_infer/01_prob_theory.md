@@ -5,17 +5,17 @@ tags:
 
 # Probability Theory
 
-- [Set Theory](content:Set Theory)
-- [Basics of Probability Theory](content:Basics of Probability Theory)
-  - [Axiomatic Foundations](content:Axiomatic Foundations)
-  - [The Calculus of Probabilities](content:The Calculus of Probabilities)
+- [Set Theory](content:Set_Theory)
+- [Basics of Probability Theory](content:Basics_of_Probability_Theory)
+  - [Axiomatic Foundations](content:Axiomatic_Foundations)
+  - [The Calculus of Probabilities](content:The_Calculus_of_Probabilities)
   - [Counting](content:Counting)
-- [Conditional Probability and Independence](content:Conditional Probability and Independence)
-- [Random Variables](content:Random Variables)
-- [Distribution Functions](content:Distribution Functions)
-- [Density and Mass Functions](content:Density and Mass Functions)
+- [Conditional Probability and Independence](content:Conditional_Probability_and_Independence)
+- [Random Variables](content:Random_Variables)
+- [Distribution Functions](content:Distribution_Functions)
+- [Density and Mass Functions](content:Density_and_Mass_Functions)
 
-(content:Set Theory)=
+(content:Set_Theory)=
 ## Set Theory
 
 **_Sample space_**: The set, $S$, of all possible outcomes of a particular experiment is called the sample space for the experiment.
@@ -88,14 +88,14 @@ Partitions allows us to divide the sample space into small, nonoverlapping piece
 **_Partition_**: If $A_1, A_2, \dots$ are pairwise disjoint and $\cup_{i=1}^\infty A_i = S$, then the
 collection $A_1, A_2, \dots$ forms a partition of $S$.
 
-(content:Basics of Probability Theory)=
+(content:Basics_of_Probability_Theory)=
 ## Basics of Probability Theory
 
 When an experiment is performed, _the realization of the experiment_ is an outcome in the sample space.
 
 For each event $A$ in the sample space $S$ we want to associate with $A$ a number between zero and one that will be called the probability of $A$, denoted by $P(A)$.
 
-(content:Axiomatic Foundations)=
+(content:Axiomatic_Foundations)=
 ### Axiomatic Foundations
 
 **_Definition 1.2.1_**: A collection of subsets of $S$ is called a sigma algebra (or Borel field), denoted by $\mathcal{B}$, if it satisfies the following three properties:
@@ -132,7 +132,7 @@ $$
 P(A \cup B) = P(A) + P(B)
 ```
 
-(content:The Calculus of Probabilities)=
+(content:The_Calculus_of_Probabilities)=
 ### The Calculus of Probabilities
 
 **Theorem**: If $P$ is a probability function and $A$ is any set in $\mathcal{B}$, then
@@ -170,7 +170,7 @@ P(A \cup B) = P(A) + P(B)
 |  Ordered  | $\frac{n!}{(n-r)!}$ |         $n^r$         |
 | Unordered |   $\binom{n}{r}$    | $\binom{n + r -1}{r}$ |
 
-(content:Conditional Probability and Independence)=
+(content:Conditional_Probability_and_Independence)=
 ## Conditional Probability and Independence
 
 **_Definition 1.3.2_**: If $A$ and $B$ are events in $S$, and $P(B) > 0$, then the conditional probability of $A$ given $B$, written $P(A|B)$, is
@@ -208,7 +208,7 @@ also independent:
 P\left(\cap_{j=1}^k A_{i_j}\right) = \prod_{j=1}^k P(A_{i_j})
 ```
 
-(content:Random Variables)=
+(content:Random_Variables)=
 ## Random Variables
 
 **_Definition 1.4.1_** A random variable is a function from a sample space S into the real numbers.
@@ -221,7 +221,7 @@ P\left(\cap_{j=1}^k A_{i_j}\right) = \prod_{j=1}^k P(A_{i_j})
 | Toss a coin 25 times                                 | $X =$ number of heads in 25 tosses |
 | Apply different amounts of fertilizer to corn plants | $X =$ yield/acre                   |
 
-(content:Distribution Functions)=
+(content:Distribution_Functions)=
 ## Distribution Functions
 
 **_Definition 1.5.1_** The cumulative distribution function or cdf of a random variable $X$, denoted by $F_X(x)$, is defined by
@@ -252,7 +252,7 @@ Note that two random variables that are identically distributed are not necessar
 1. The random variables $X$ and $Y$ are identically distributed.
 2. $F_X(x) = F_Y (x)$ for every $x$.
 
-(content:Density and Mass Functions)=
+(content:Density_and_Mass_Functions)=
 ## Density and Mass Functions
 
 ***Definition 1.6.1*** The probability mass function (pmf) of a discrete random variable $X$ is given by
