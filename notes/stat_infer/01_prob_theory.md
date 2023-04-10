@@ -153,7 +153,8 @@ P(A \cup B) = P(A) + P(B)
 
 **Theorem 1.2.14** If a job consists of $k$ separate tasks, the $i$th of which can be done in $n_i$ ways, $i = 1, \dots, k$, then the entire job can be done in $n_1 \times n_2 \times \dots \times n_k$ ways.
 
-<center>Table 1.2.1 Number of possible arrangements of size $r$ from $n$ objects</center>
+:::{table} Table 1.2.1 Number of possible arrangements of size $r$ from $n$ objects
+:align: center
 
 |           | Without replacement |   With replacement    |
 | :-------: | :-----------------: | :-------------------: |
