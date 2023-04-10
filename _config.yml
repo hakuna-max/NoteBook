@@ -54,3 +54,7 @@ myst_enable_extensions:
   - strikethrough
   - substitution
   - tasklist
+
+sphinx:
+  extra_extensions:
+  - sphinx_inline_tabs
