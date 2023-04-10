@@ -8,3 +8,7 @@ parts:
     numbered: 3
     chapters:
     - file: notes/stat_infer/01_prob_theory
+  - caption: Carbon Accounting Methodology
+    numbered: 3
+    chapters:
+    - file: notes/carbon_accounting/00_index.md
