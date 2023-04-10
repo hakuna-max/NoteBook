@@ -379,25 +379,21 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="probability-theory">
 <h1>Probability Theory<a class="headerlink" href="#probability-theory" title="Permalink to this heading">#</a></h1>
 <ul class="simple">
-<li><p><span class="xref myst">Probability Theory</span></p>
+<li><p>[Set Theory](content:Set Theory)</p></li>
+<li><p>[Basics of Probability Theory](content:Basics of Probability Theory)</p>
 <ul>
-<li><p><span class="xref myst">Set Theory</span></p></li>
-<li><p><span class="xref myst">Basics of Probability Theory</span></p>
-<ul>
-<li><p><span class="xref myst">Axiomatic Foundations</span></p></li>
-<li><p><span class="xref myst">The Calculus of Probabilities</span></p></li>
-<li><p><span class="xref myst">Counting</span></p></li>
+<li><p>[Axiomatic Foundations](content:Axiomatic Foundations)</p></li>
+<li><p>[The Calculus of Probabilities](content:The Calculus of Probabilities)</p></li>
+<li><p><a class="reference internal" href="#content-counting"><span class="std std-ref">Counting</span></a></p></li>
 </ul>
 </li>
-<li><p><span class="xref myst">Conditional Probability and Independence</span></p></li>
-<li><p><span class="xref myst">Random Variables</span></p></li>
-<li><p><span class="xref myst">Distribution Functions</span></p></li>
-<li><p><span class="xref myst">Density and Mass Functions</span></p></li>
-</ul>
-</li>
+<li><p>[Conditional Probability and Independence](content:Conditional Probability and Independence)</p></li>
+<li><p>[Random Variables](content:Random Variables)</p></li>
+<li><p>[Distribution Functions](content:Distribution Functions)</p></li>
+<li><p>[Density and Mass Functions](content:Density and Mass Functions)</p></li>
 </ul>
 <section id="set-theory">
-<h2>Set Theory<a class="headerlink" href="#set-theory" title="Permalink to this heading">#</a></h2>
+<span id="content-set-theory"></span><h2>Set Theory<a class="headerlink" href="#set-theory" title="Permalink to this heading">#</a></h2>
 <p><strong><em>Sample space</em></strong>: The set, <span class="math notranslate nohighlight">\(S\)</span>, of all possible outcomes of a particular experiment is called the sample space for the experiment.</p>
 <p><strong><em>Event</em></strong>: An event is any collection of possible outcomes of an experiment, that is, any subset of S (including S itself).</p>
 <p><strong><em>Containment</em></strong>:
@@ -457,11 +453,11 @@ A \cup B = \{x: x \in A~\text{or}~x \in B\}
 collection <span class="math notranslate nohighlight">\(A_1, A_2, \dots\)</span> forms a partition of <span class="math notranslate nohighlight">\(S\)</span>.</p>
 </section>
 <section id="basics-of-probability-theory">
-<h2>Basics of Probability Theory<a class="headerlink" href="#basics-of-probability-theory" title="Permalink to this heading">#</a></h2>
+<span id="content-basics-of-probability-theory"></span><h2>Basics of Probability Theory<a class="headerlink" href="#basics-of-probability-theory" title="Permalink to this heading">#</a></h2>
 <p>When an experiment is performed, <em>the realization of the experiment</em> is an outcome in the sample space.</p>
 <p>For each event <span class="math notranslate nohighlight">\(A\)</span> in the sample space <span class="math notranslate nohighlight">\(S\)</span> we want to associate with <span class="math notranslate nohighlight">\(A\)</span> a number between zero and one that will be called the probability of <span class="math notranslate nohighlight">\(A\)</span>, denoted by <span class="math notranslate nohighlight">\(P(A)\)</span>.</p>
 <section id="axiomatic-foundations">
-<h3>Axiomatic Foundations<a class="headerlink" href="#axiomatic-foundations" title="Permalink to this heading">#</a></h3>
+<span id="content-axiomatic-foundations"></span><h3>Axiomatic Foundations<a class="headerlink" href="#axiomatic-foundations" title="Permalink to this heading">#</a></h3>
 <p><strong><em>Definition 1.2.1</em></strong>: A collection of subsets of <span class="math notranslate nohighlight">\(S\)</span> is called a sigma algebra (or Borel field), denoted by <span class="math notranslate nohighlight">\(\mathcal{B}\)</span>, if it satisfies the following three properties:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\emptyset \in \mathcal{B}\)</span> (the empty set is an element of <span class="math notranslate nohighlight">\(\mathcal{B}\)</span>)</p></li>
@@ -495,7 +491,7 @@ collection <span class="math notranslate nohighlight">\(A_1, A_2, \dots\)</span>
 <span class="eqno">(1)<a class="headerlink" href="#equation-eq-axiom-of-finite-additivity" title="Permalink to this equation">#</a></span>\[P(A \cup B) = P(A) + P(B)\]</div>
 </section>
 <section id="the-calculus-of-probabilities">
-<h3>The Calculus of Probabilities<a class="headerlink" href="#the-calculus-of-probabilities" title="Permalink to this heading">#</a></h3>
+<span id="content-the-calculus-of-probabilities"></span><h3>The Calculus of Probabilities<a class="headerlink" href="#the-calculus-of-probabilities" title="Permalink to this heading">#</a></h3>
 <p><strong>Theorem</strong>: If <span class="math notranslate nohighlight">\(P\)</span> is a probability function and <span class="math notranslate nohighlight">\(A\)</span> is any set in <span class="math notranslate nohighlight">\(\mathcal{B}\)</span>, then</p>
 <ol class="arabic simple">
 <li><p><span class="math notranslate nohighlight">\(P(\emptyset) = 0\)</span>, where <span class="math notranslate nohighlight">\(\emptyset\)</span> is the empty set;</p></li>
@@ -515,7 +511,7 @@ collection <span class="math notranslate nohighlight">\(A_1, A_2, \dots\)</span>
 </ol>
 </section>
 <section id="counting">
-<h3>Counting<a class="headerlink" href="#counting" title="Permalink to this heading">#</a></h3>
+<span id="content-counting"></span><h3>Counting<a class="headerlink" href="#counting" title="Permalink to this heading">#</a></h3>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <div class="admonition note">
@@ -546,7 +542,7 @@ collection <span class="math notranslate nohighlight">\(A_1, A_2, \dots\)</span>
 </section>
 </section>
 <section id="conditional-probability-and-independence">
-<h2>Conditional Probability and Independence<a class="headerlink" href="#conditional-probability-and-independence" title="Permalink to this heading">#</a></h2>
+<span id="content-conditional-probability-and-independence"></span><h2>Conditional Probability and Independence<a class="headerlink" href="#conditional-probability-and-independence" title="Permalink to this heading">#</a></h2>
 <p><strong><em>Definition 1.3.2</em></strong>: If <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are events in <span class="math notranslate nohighlight">\(S\)</span>, and <span class="math notranslate nohighlight">\(P(B) &gt; 0\)</span>, then the conditional probability of <span class="math notranslate nohighlight">\(A\)</span> given <span class="math notranslate nohighlight">\(B\)</span>, written <span class="math notranslate nohighlight">\(P(A|B)\)</span>, is</p>
 <div class="math notranslate nohighlight" id="equation-eq-conditional-probability">
 <span class="eqno">(2)<a class="headerlink" href="#equation-eq-conditional-probability" title="Permalink to this equation">#</a></span>\[P(A|B) = \frac{P(A \cap B)}{P(B)}\]</div>
@@ -568,7 +564,7 @@ also independent:</p>
 <span class="eqno">(5)<a class="headerlink" href="#equation-eq-mutually-independent" title="Permalink to this equation">#</a></span>\[P\left(\cap_{j=1}^k A_{i_j}\right) = \prod_{j=1}^k P(A_{i_j})\]</div>
 </section>
 <section id="random-variables">
-<h2>Random Variables<a class="headerlink" href="#random-variables" title="Permalink to this heading">#</a></h2>
+<span id="content-random-variables"></span><h2>Random Variables<a class="headerlink" href="#random-variables" title="Permalink to this heading">#</a></h2>
 <p><strong><em>Definition 1.4.1</em></strong> A random variable is a function from a sample space S into the real numbers.</p>
 <center>Examples of random variables</center>
 <table class="table">
@@ -591,7 +587,7 @@ also independent:</p>
 </table>
 </section>
 <section id="distribution-functions">
-<h2>Distribution Functions<a class="headerlink" href="#distribution-functions" title="Permalink to this heading">#</a></h2>
+<span id="content-distribution-functions"></span><h2>Distribution Functions<a class="headerlink" href="#distribution-functions" title="Permalink to this heading">#</a></h2>
 <p><strong><em>Definition 1.5.1</em></strong> The cumulative distribution function or cdf of a random variable <span class="math notranslate nohighlight">\(X\)</span>, denoted by <span class="math notranslate nohighlight">\(F_X(x)\)</span>, is defined by</p>
 <div class="math notranslate nohighlight" id="equation-eq-cdf">
 <span class="eqno">(6)<a class="headerlink" href="#equation-eq-cdf" title="Permalink to this equation">#</a></span>\[F_X(x) = P_X(X \leq x), \text{for all} x.\]</div>
@@ -617,10 +613,10 @@ also independent:</p>
 </ol>
 </section>
 <section id="density-and-mass-functions">
-<h2>Density and Mass Functions<a class="headerlink" href="#density-and-mass-functions" title="Permalink to this heading">#</a></h2>
+<span id="content-density-and-mass-functions"></span><h2>Density and Mass Functions<a class="headerlink" href="#density-and-mass-functions" title="Permalink to this heading">#</a></h2>
 <p><em><strong>Definition 1.6.1</strong></em> The probability mass function (pmf) of a discrete random variable <span class="math notranslate nohighlight">\(X\)</span> is given by</p>
 <div class="math notranslate nohighlight" id="equation-eq-pmf">
-<span class="eqno">(7)<a class="headerlink" href="#equation-eq-pmf" title="Permalink to this equation">#</a></span>\[f_X(x) = P(X = x), \text{for all} x.\]</div>
+<span class="eqno">(7)<a class="headerlink" href="#equation-eq-pmf" title="Permalink to this equation">#</a></span>\[f_X(x) = P(X = x), \text{for all} ~x.\]</div>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <div class="admonition note">
@@ -630,7 +626,7 @@ also independent:</p>
 </aside>
 <p><em><strong>Definition 1.6.3</strong></em> The probability density function or pdf , <span class="math notranslate nohighlight">\(f_X(x)\)</span>, of a continuous random variable <span class="math notranslate nohighlight">\(X\)</span> is the function that satisfies</p>
 <div class="math notranslate nohighlight" id="equation-eq-pdf">
-<span class="eqno">(8)<a class="headerlink" href="#equation-eq-pdf" title="Permalink to this equation">#</a></span>\[F_X(x) = \int_{- \infty}^x f_X(t) dt, \text{for all} x.\]</div>
+<span class="eqno">(8)<a class="headerlink" href="#equation-eq-pdf" title="Permalink to this equation">#</a></span>\[F_X(x) = \int_{- \infty}^x f_X(t) dt, \text{for all} ~x.\]</div>
 <p><strong>Theorem 1.6.5</strong> A function <span class="math notranslate nohighlight">\(f_X(x)\)</span> is a pdf (or pmf) of a random variable <span class="math notranslate nohighlight">\(X\)</span> if and only if</p>
 <ol class="arabic simple">
 <li><p><span class="math notranslate nohighlight">\(f_X(x) \geq 0\)</span> for all <span class="math notranslate nohighlight">\(x\)</span>,</p></li>
