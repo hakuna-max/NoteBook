@@ -201,7 +201,7 @@ P\left(\cap_{j=1}^k A_{i_j}\right) = \prod_{j=1}^k P(A_{i_j})
 (content:Random_Variables)=
 ## Random Variables
 
-**_Definition 1.4.1_** A random variable is a function from a sample space S into the real numbers.
+**_Definition 1.4.1_** A random variable is a function from a sample space $S$ into the real numbers.
 
 <center>Examples of random variables</center>
 
