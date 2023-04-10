@@ -252,7 +252,7 @@ Note that two random variables that are identically distributed are not necessar
 
 ```{math}
 :label: eq-pmf
-f_X(x) = P(X = x), \text{for all} x.
+f_X(x) = P(X = x), \text{for all} ~x.
 ```
 
 ````{margin}
@@ -265,7 +265,7 @@ The expression “$X$ has a distribution given by $F_X(x)$” is abbreviated sym
 
 ```{math}
 :label: eq-pdf
-F_X(x) = \int_{- \infty}^x f_X(t) dt, \text{for all} x.
+F_X(x) = \int_{- \infty}^x f_X(t) dt, \text{for all} ~x.
 ```
 
 **Theorem 1.6.5** A function $f_X(x)$ is a pdf (or pmf) of a random variable $X$ if and only if
