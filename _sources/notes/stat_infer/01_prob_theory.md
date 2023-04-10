@@ -5,6 +5,18 @@ tags:
 
 # Probability Theory
 
+- [Probability Theory](#probability-theory)
+  - [Set Theory](#set-theory)
+  - [Basics of Probability Theory](#basics-of-probability-theory)
+    - [Axiomatic Foundations](#axiomatic-foundations)
+    - [The Calculus of Probabilities](#the-calculus-of-probabilities)
+    - [Counting](#counting)
+  - [Conditional Probability and Independence](#conditional-probability-and-independence)
+  - [Random Variables](#random-variables)
+  - [Distribution Functions](#distribution-functions)
+  - [Density and Mass Functions](#density-and-mass-functions)
+
+
 ## Set Theory
 
 **_Sample space_**: The set, $S$, of all possible outcomes of a particular experiment is called the sample space for the experiment.
@@ -114,9 +126,9 @@ $$
 
 **Axiom of Finite Additivity**: If $A \in \mathcal{B}$ and $B \in \mathcal{B}$ are disjoint, then
 
-```math
+```{math}
 :label: eq-Axiom of Finite Additivity
-P(A\cup B) = P(A) + P(B)
+P(A \cup B) = P(A) + P(B)
 ```
 
 ### The Calculus of Probabilities
@@ -259,4 +271,4 @@ F_X(x) = \int_{- \infty}^x f_X(t) dt, \text{for all} x.
 **Theorem 1.6.5** A function $f_X(x)$ is a pdf (or pmf) of a random variable $X$ if and only if
 
 1. $f_X(x) \geq 0$ for all $x$,
-2. \sum_x f_X(x) = 1$ (pmf) or $\int_{- \infty}^\infty f_X(x) dx = 1$ (pdf)
+2. $\sum_x f_X(x) = 1$ (pmf) or $\int_{- \infty}^\infty f_X(x) dx = 1$ (pdf)
