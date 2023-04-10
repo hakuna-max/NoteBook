@@ -5,16 +5,6 @@ tags:
 
 # Probability Theory
 
-- [Set Theory](content:Set_Theory)
-- [Basics of Probability Theory](content:Basics_of_Probability_Theory)
-  - [Axiomatic Foundations](content:Axiomatic_Foundations)
-  - [The Calculus of Probabilities](content:The_Calculus_of_Probabilities)
-  - [Counting](content:Counting)
-- [Conditional Probability and Independence](content:Conditional_Probability_and_Independence)
-- [Random Variables](content:Random_Variables)
-- [Distribution Functions](content:Distribution_Functions)
-- [Density and Mass Functions](content:Density_and_Mass_Functions)
-
 (content:Set_Theory)=
 ## Set Theory
 
