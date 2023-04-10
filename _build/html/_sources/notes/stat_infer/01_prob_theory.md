@@ -83,7 +83,9 @@ When an experiment is performed, _the realization of the experiment_ is an outco
 
 For each event $A$ in the sample space $S$ we want to associate with $A$ a number between zero and one that will be called the probability of $A$, denoted by $P(A)$.
 
-**_sigma algebra (or Borel field)_**: A collection of subsets of $S$ is called a sigma algebra (or Borel field), denoted by $\mathcal{B}$, if it satisfies the following three properties:
+### Axiomatic Foundations
+
+**_Definition 1.2.1_**: A collection of subsets of $S$ is called a sigma algebra (or Borel field), denoted by $\mathcal{B}$, if it satisfies the following three properties:
 
 - $\emptyset \in \mathcal{B}$ (the empty set is an element of $\mathcal{B}$)
 - If $\mathcal{A} \in \mathcal{B}$, then $\mathcal{A}^c \in \mathcal{B}$ ($\mathcal{B}$ is closed under complementation).
@@ -96,19 +98,28 @@ For each event $A$ in the sample space $S$ we want to associate with $A$ a numbe
 ```
 ````
 
-**_Probability function_**: Given a sample space $S$ and an associated sigma algebra $\mathcal{B}$, a probability function is a function $P$ with domain $\mathcal{B}$ that satisfies
+**_Definition 1.2.4_**: Given a sample space $S$ and an associated sigma algebra $\mathcal{B}$, a probability function is a function $P$ with domain $\mathcal{B}$ that satisfies
 
 1. $P(A) \geq 0$ for all $A \in \mathcal{B}.$
 2. $P(S) = 1$
 3. If $A_1, A_2, \dots \in  \mathcal{B}$ are pairwise disjoint, then $P(\cup_{i=1}^\infty A_i) = \sum_{i=1}^\infty P(A_i)$
 
-**Theorem**: Let $S = \{s_1, \dots, s_n\}$ be a finite set. Let $\mathcal{B}$ be any sigma algebra of subsets of $S$. Let $p_1, \dots, p_n$ be nonnegative numbers that sum to 1. For any $A \in \mathcal{B}$, define $P(A)$ by
+**Theorem 1.2.6**: Let $S = \{s_1, \dots, s_n\}$ be a finite set. Let $\mathcal{B}$ be any sigma algebra of subsets of $S$. Let $p_1, \dots, p_n$ be nonnegative numbers that sum to 1. For any $A \in \mathcal{B}$, define $P(A)$ by
 
 $$
     P(A) = \sum_{\{i: s_i \in A\}} p_i
 $$
 
 (The sum over an empty set is defined to be 0.) Then $P$ is a probability function on $\mathcal{B}$. This remains true if $S = \{s_1, s_2, \dots\}$ is a countable set.
+
+**Axiom of Finite Additivity**: If $A \in \mathcal{B}$ and $B \in \mathcal{B}$ are disjoint, then
+
+```math
+:label: eq-Axiom of Finite Additivity
+P(A\cup B) = P(A) + P(B)
+```
+
+### The Calculus of Probabilities
 
 **Theorem**: If $P$ is a probability function and $A$ is any set in $\mathcal{B}$, then
 
@@ -127,10 +138,6 @@ $$
 1. $P(A) = \sum_{i=1}^\infty P(A \cap C_i)$ for any partition $C_1, C_2, \dots$
 2. $P(\cup_{i=1}^\infty A_i) \leq \sum_{i=1}^\infty P(A_i)$ for any sets $A_1, A_2, \dots$ (Bool's Inequality)
 
-### Axiomatic Foundations
-
-### The Calculus of Probabilities
-
 ### Counting
 
 ````{margin}
@@ -141,7 +148,7 @@ $$
 
 **Theorem 1.2.14** If a job consists of $k$ separate tasks, the $i$th of which can be done in $n_i$ ways, $i = 1, \dots, k$, then the entire job can be done in $n_1 \times n_2 \times \dots \times n_k$ ways.
 
-<center>Table 1.2.1 Number of possible arrangements of size r from n objects</center>
+<center>Table 1.2.1 Number of possible arrangements of size $r$ from $n$ objects</center>
 
 |           | Without replacement |   With replacement    |
 | :-------: | :-----------------: | :-------------------: |
@@ -187,6 +194,69 @@ P\left(\cap_{j=1}^k A_{i_j}\right) = \prod_{j=1}^k P(A_{i_j})
 
 ## Random Variables
 
+**_Definition 1.4.1_** A random variable is a function from a sample space S into the real numbers.
+
+<center>Examples of random variables</center>
+
+| Experiment                                           | Random Variables                   |
+| :--------------------------------------------------- | :--------------------------------- |
+| Toss two dice                                        | $X =$ sum of the numbers           |
+| Toss a coin 25 times                                 | $X =$ number of heads in 25 tosses |
+| Apply different amounts of fertilizer to corn plants | $X =$ yield/acre                   |
+
 ## Distribution Functions
 
+**_Definition 1.5.1_** The cumulative distribution function or cdf of a random variable $X$, denoted by $F_X(x)$, is defined by
+
+```{math}
+:label: eq-cdf
+F_X(x) = P_X(X \leq x), \text{for all} x.
+```
+
+**Theorem 1.5.3** The function $F(x)$ is a cdf if and only if the following three conditions hold:
+
+1. $\lim_{x \rightarrow -\infty}F(x) = 0$ and $\lim_{x \rightarrow \infty}F(x) = 1$.
+2. $F(x)$ is a nondecreasing function of $x$.
+3. $F(x)$ is right-continuous; that is, for every number $x_0$, $\lim_{x \downarrow x_0} F(x) = F(x_0)$
+
+**_Definition 1.5.7_** A random variable $X$ is continuous if $F_X(x)$ is a continuous function of $x$. A random variable $X$ is discrete if $F_X(x)$ is a step function of $x$.
+
+````{margin}
+```{note}
+Note that two random variables that are identically distributed are not necessarily equal. That is, Definition 1.5.8 does not say that $X = Y$ .
+```
+````
+
+**_Definition 1.5.8_** The random variables $X$ and $Y$ are identically distributed if, for every set $A \in \mathcal{B^1}, P(X \in A) = P(Y \in A)$.
+
+**Theorem 1.5.10** The following two statements are equivalent:
+
+1. The random variables $X$ and $Y$ are identically distributed.
+2. $F_X(x) = F_Y (x)$ for every $x$.
+
 ## Density and Mass Functions
+
+***Definition 1.6.1*** The probability mass function (pmf) of a discrete random variable $X$ is given by
+
+```{math}
+:label: eq-pmf
+f_X(x) = P(X = x), \text{for all} x.
+```
+
+````{margin}
+```{note}
+The expression “$X$ has a distribution given by $F_X(x)$” is abbreviated symbolically by “$X \thicksim F_X(x)$,” where we read the symbol “$\thicksim$” as “is distributed as.” We can similarly write $X \thicksim f_X(x)$ or, if $X$ and $Y$ have the same distribution, $X \thicksim Y$ .
+```
+````
+
+***Definition 1.6.3*** The probability density function or pdf , $f_X(x)$, of a continuous random variable $X$ is the function that satisfies
+
+```{math}
+:label: eq-pdf
+F_X(x) = \int_{- \infty}^x f_X(t) dt, \text{for all} x.
+```
+
+**Theorem 1.6.5** A function $f_X(x)$ is a pdf (or pmf) of a random variable $X$ if and only if
+
+1. $f_X(x) \geq 0$ for all $x$,
+2. \sum_x f_X(x) = 1$ (pmf) or $\int_{- \infty}^\infty f_X(x) dx = 1$ (pdf)
