@@ -11,4 +11,4 @@ parts:
   - caption: Carbon Accounting Methodology
     numbered: 3
     chapters:
-    - file: notes/carbon_accounting/00_index.md
+    - file: notes/carbon_accounting/00_ref.md
