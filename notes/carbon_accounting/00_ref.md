@@ -1,6 +1,7 @@
 # Reference
 
 - [ ] [IPCC Updates Methodology for Greenhouse Gas Inventories](https://www.ipcc.ch/2019/05/13/ipcc-2019-refinement/)
+- [ ] [IPCC Guidelines for National Greenhouse Gas Inventories](https://www.ipcc-nggip.iges.or.jp/public/index.html)
 - [ ] Chen, G., Shan, Y., Hu, Y., Tong, K., Wiedmann, T., Ramaswami, A., Guan, D., Shi, L., Wang, Y., 2019. [Review on City-Level Carbon Accounting](https://doi.org/10.1021/acs.est.8b07071). Environ. Sci. Technol. 53, 5545–5558. 
 - [ ] Davis, S.J., Caldeira, K., 2010. [Consumption-based accounting of CO2 emissions](https://doi.org/10.1073/pnas.0906974107). Proceedings of the National Academy of Sciences 107, 5687–5692. 
 - [ ] Jia, J.-J., Zhu, M., Wei, C., 2022. [Household cooking in the context of carbon neutrality: A machine-learning-based review]( https://doi.org/10.1016/j.rser.2022.112856). Renewable and Sustainable Energy Reviews 168, 112856.
