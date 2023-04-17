@@ -58,6 +58,6 @@ myst_enable_extensions:
   - tasklist
 
 sphinx:
-  extra_extensions: [sphinx_inline_tabs]
+  # extra_extensions: [sphinx_inline_tabs]
   config:
     html_show_copyright: false
