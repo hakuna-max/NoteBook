@@ -12,3 +12,7 @@ parts:
     numbered: 3
     chapters:
     - file: notes/carbon_accounting/00_ref.md
+  - caption: Buffer
+    numbered: 3
+    chapters:
+    - file: notes/stat_infer/CFA in R with Lavaan.ipynb
