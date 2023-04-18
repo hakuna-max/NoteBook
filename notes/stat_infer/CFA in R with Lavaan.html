@@ -61,8 +61,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notes/stat_infer/CFA in R with Lavaan';</script>
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -270,7 +268,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/notes/stat_infer/CFA in R with Lavaan.ipynb" target="_blank"
+      <li><a href="../../_sources/notes/stat_infer/CFA in R with Lavaan.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -280,7 +278,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.ipynb</span>
+<span class="btn__text-container">.md</span>
 </a>
 </li>
       
@@ -339,9 +337,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -357,18 +353,6 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose">1.1. Purpose</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements">1.2. Requirements</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">1.3. Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivating-example-spss-anxiety-questionnaire-saq-8">1.4. Motivating example: SPSS Anxiety Questionnaire (SAQ-8)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-factor-analysis-model">1.5. The factor analysis model</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -378,157 +362,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <p>copy from <a class="reference external" href="https://stats.idre.ucla.edu/wp-content/uploads/2020/02/cfa.r">https://stats.idre.ucla.edu/wp-content/uploads/2020/02/cfa.r</a> for personal study</p>
-<section class="tex2jax_ignore mathjax_ignore" id="confirmatory-factor-analysis-cfa-in-r-with-lavaan">
+  <section class="tex2jax_ignore mathjax_ignore" id="confirmatory-factor-analysis-cfa-in-r-with-lavaan">
 <h1><span class="section-number">1. </span>Confirmatory Factor Analysis (CFA) in R with lavaan<a class="headerlink" href="#confirmatory-factor-analysis-cfa-in-r-with-lavaan" title="Permalink to this heading">#</a></h1>
-<section id="purpose">
-<h2><span class="section-number">1.1. </span>Purpose<a class="headerlink" href="#purpose" title="Permalink to this heading">#</a></h2>
-<p>This seminar will show you how to perform a confirmatory factor analysis using lavaan in the R statistical programming language. Its emphasis is on understanding the concepts of CFA and interpreting the output rather than a thorough mathematical treatment or a comprehensive list of syntax options in lavaan. For exploratory factor analysis (EFA), please refer to <a class="reference external" href="https://stats.oarc.ucla.edu/spss/seminars/introduction-to-factor-analysis/a-practical-introduction-to-factor-analysis/">A Practical Introduction to Factor Analysis: Exploratory Factor Analysis</a>. A rudimentary knowledge of linear regression is required to understand some of the material in this seminar.</p>
-<p>This seminar is the first in a three-part series on latent variable modeling. The second seminar goes over a broader range of observed and latent variable models. In this first seminar, all variables are presumed to be
-<span class="math notranslate nohighlight">\(y\)</span>-side variables and the direction of the arrows are unconventional (pointing to the left). Traditionally, CFA models should be <span class="math notranslate nohighlight">\(x\)</span>-side variables with parameters for the latent factor and for the observed residuals. Since <span class="math notranslate nohighlight">\(y\)</span>-side notation is more common in the literature, we use <span class="math notranslate nohighlight">\(\eta\)</span> and <span class="math notranslate nohighlight">\(\epsilon\)</span> for the respective factor and observed residual parameters. However, in the second seminar we necessitate distinguishing between -side and
-<span class="math notranslate nohighlight">\(x\)</span>-side variables for instructional purposes.</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://stats.idre.ucla.edu/r/seminars/rsem/">Introduction to Structural Equation Modeling (SEM) in R with lavaan</a>.</p></li>
-</ul>
-<p>The third seminar goes over intermediate topics in CFA including latent growth modeling and measurement invariance.</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://stats.idre.ucla.edu/r/seminars/lgm/">Latent Growth Models (LGM) and Measurement Invariance with R in lavaan</a></p></li>
-</ul>
-</section>
-<section id="requirements">
-<h2><span class="section-number">1.2. </span>Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading">#</a></h2>
-<p>Before beginning the seminar, please make sure you have <a class="reference external" href="https://cran.r-project.org/">R</a> and <a class="reference external" href="https://www.rstudio.com/">RStudio</a> installed.</p>
-<p>Please also make sure to have the following R packages installed, and if not, run these commands in R (RStudio).</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;lavaan&quot;</span><span class="p">,</span> <span class="n">dependencies</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing package into &#39;C:/Users/rolfz/AppData/Local/R/win-library/4.2&#39;
-(as &#39;lib&#39; is unspecified)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>package &#39;lavaan&#39; successfully unpacked and MD5 sums checked
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The downloaded binary packages are in
-	C:\Users\rolfz\AppData\Local\Temp\RtmpcNoFxi\downloaded_packages
-</pre></div>
-</div>
-</div>
-</div>
-<p>Once you’ve installed the packages, you can load them via the following</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">foreign</span><span class="p">)</span> 
-<span class="nf">library</span><span class="p">(</span><span class="n">lavaan</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This is lavaan 0.6-15
-lavaan is FREE software! Please report any bugs.
-</pre></div>
-</div>
-</div>
-</div>
-<p>Download files here</p>
-<p>You may download the complete R code here: <a class="reference external" href="https://stats.idre.ucla.edu/wp-content/uploads/2020/02/cfa.r">cfa.r</a></p>
-<p>After clicking on the link, you can copy and paste the entire code into R or RStudio.</p>
-</section>
-<section id="introduction">
-<h2><span class="section-number">1.3. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
-<p>Factor analysis can be divided into two main types, <strong>exploratory</strong> and <strong>confirmatory</strong>. Exploratory factor analysis,
-also known as EFA, as the name suggests is an exploratory tool to understand the underlying psychometric properties
-of an unknown scale. Confirmatory factor analysis borrows many of  the same concepts from exploratory factor analysis except that instead of letting
-the data tell us the factor structure, we pre-determine the factor structure and verify the psychometric structure
-of a previously developed scale. More recent work by Asparouhov and Muthén (2009) blurs the boundaries between
-EFA and CFA, but traditionally the two methods have been distinct. EFA has a longer historical precedence,
-dating back to the era of Spearman (1904) whereas CFA became more popular after a breakthrough in both computing
-technology and an estimation method developed by Jöreskog (1969). This distinction shows up in software as well.
-For example, EFA is available in SPSS FACTOR, SAS PROC FACTOR  and Stata’s factor. However, in SPSS a separate
-program called Amos is needed to run CFA, along with other packages such as Mplus, EQS, SAS PROC CALIS,
-Stata’s sem and more recently, R’s <a class="reference external" href="http://lavaan.ugent.be/">lavaan</a>. Since the focus of this seminar is CFA
-and R, we will focus on lavaan.</p>
-<p>In this seminar, we will understand the concepts of CFA through the lens of a statistical analyst tasked to explore the psychometric properties of a newly proposed 8-item SPSS Anxiety Questionnaire. Due to budget constraints, the lab uses the freely available R statistical programming language, and lavaan as the CFA and structural equation modeling (SEM) package of choice. We will understand concepts such as the factor analysis model, basic lavaan syntax, model parameters, identification and model fit statistics. These concepts are crucial to deciding how many items to use per factor, as well how to successfully fit a one-factor, two-factor and second-order factor
-analysis. By the end of this training, you should be able to understand enough of these concepts to run your own confirmatory factor analysis in lavaan.</p>
-</section>
-<section id="motivating-example-spss-anxiety-questionnaire-saq-8">
-<h2><span class="section-number">1.4. </span>Motivating example: SPSS Anxiety Questionnaire (SAQ-8)<a class="headerlink" href="#motivating-example-spss-anxiety-questionnaire-saq-8" title="Permalink to this heading">#</a></h2>
-<p>Suppose you are tasked with evaluating a hypothetical but real world
-example of a questionnaire which <a class="reference external" href="https://edge.sagepub.com/field5e/student-resources/datasets">Andy Field</a> terms the SPSS Anxiety Questionnaire (SAQ).  The first eight items consist of the following (note the actual items have been modified slightly from the original data set):</p>
-<ol class="arabic simple">
-<li><p>Statistics makes me cry</p></li>
-<li><p>My friends will think I’m stupid for not being able to cope with SPSS</p></li>
-<li><p>Standard deviations excite me</p></li>
-<li><p>I dream that Pearson is attacking me with correlation coefficients</p></li>
-<li><p>I don’t understand statistics</p></li>
-<li><p>I have little experience with computers</p></li>
-<li><p>All computers hate me</p></li>
-<li><p>I have never been good at mathematics</p></li>
-</ol>
-<p>Throughout the seminar we will use the terms items and <em>indicators</em> interchangeably, with the latter emphasizing the relationship of these items to a latent variable. Just as in our <a class="reference external" href="https://stats.idre.ucla.edu/spss/seminars/efa-spss/">exploratory factor analysis</a> our Principal Investigator would like to evaluate the psychometric properties of our proposed 8-item SPSS Anxiety Questionnaire “SAQ-8”, proposed as a
-shortened version of the original SAQ in order to shorten the time commitment for participants while maintaining internal consistency and validity.  The data collectors have collected 2,571 subjects so far and
-uploaded the SPSS file to the IDRE server. The SPSS file can be download through the following link: <a class="reference external" href="https://stats.idre.ucla.edu/wp-content/uploads/2018/05/SAQ.sav">SAQ.sav</a>. Even though this is an SPSS file, R can translate this file directly to an R object through the function <code class="docutils literal notranslate"><span class="pre">read.spss</span></code> via the <code class="docutils literal notranslate"><span class="pre">library(foreign)</span></code>. The option <code class="docutils literal notranslate"><span class="pre">to.data.frame</span></code> ensures the data imported is a data frame and not an R list, and <code class="docutils literal notranslate"><span class="pre">use.value.labels</span> <span class="pre">=</span> <span class="pre">FALSE</span></code> converts categorical variables to numeric values rather than factors. This is done because we want to
-run covariances on the items which is not possible with factor variables.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">dat</span> <span class="o">&lt;-</span> <span class="nf">read.spss</span><span class="p">(</span><span class="s">&quot;https://stats.idre.ucla.edu/wp-content/uploads/2018/05/SAQ.sav&quot;</span><span class="p">,</span>
-                 <span class="n">to.data.frame</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> <span class="n">use.value.labels</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Now that we have imported the data set, the first step besides looking at the data itself is to look a the correlation table of all 8 variables. The function <code class="docutils literal notranslate"><span class="pre">cor</span></code> specifies a the correlation and <code class="docutils literal notranslate"><span class="pre">round</span></code> with the option <code class="docutils literal notranslate"><span class="pre">2</span></code> specifies that we want to round the numbers to the second digit.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">round</span><span class="p">(</span><span class="nf">cor</span><span class="p">(</span><span class="n">dat</span><span class="p">[,</span><span class="m">1</span><span class="o">:</span><span class="m">8</span><span class="p">]),</span><span class="m">2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><table class="dataframe">
-<caption>A matrix: 8 × 8 of type dbl</caption>
-<thead>
-	<tr><th></th><th scope=col>q01</th><th scope=col>q02</th><th scope=col>q03</th><th scope=col>q04</th><th scope=col>q05</th><th scope=col>q06</th><th scope=col>q07</th><th scope=col>q08</th></tr>
-</thead>
-<tbody>
-	<tr><th scope=row>q01</th><td> 1.00</td><td>-0.10</td><td>-0.34</td><td> 0.44</td><td> 0.40</td><td> 0.22</td><td> 0.31</td><td> 0.33</td></tr>
-	<tr><th scope=row>q02</th><td>-0.10</td><td> 1.00</td><td> 0.32</td><td>-0.11</td><td>-0.12</td><td>-0.07</td><td>-0.16</td><td>-0.05</td></tr>
-	<tr><th scope=row>q03</th><td>-0.34</td><td> 0.32</td><td> 1.00</td><td>-0.38</td><td>-0.31</td><td>-0.23</td><td>-0.38</td><td>-0.26</td></tr>
-	<tr><th scope=row>q04</th><td> 0.44</td><td>-0.11</td><td>-0.38</td><td> 1.00</td><td> 0.40</td><td> 0.28</td><td> 0.41</td><td> 0.35</td></tr>
-	<tr><th scope=row>q05</th><td> 0.40</td><td>-0.12</td><td>-0.31</td><td> 0.40</td><td> 1.00</td><td> 0.26</td><td> 0.34</td><td> 0.27</td></tr>
-	<tr><th scope=row>q06</th><td> 0.22</td><td>-0.07</td><td>-0.23</td><td> 0.28</td><td> 0.26</td><td> 1.00</td><td> 0.51</td><td> 0.22</td></tr>
-	<tr><th scope=row>q07</th><td> 0.31</td><td>-0.16</td><td>-0.38</td><td> 0.41</td><td> 0.34</td><td> 0.51</td><td> 1.00</td><td> 0.30</td></tr>
-	<tr><th scope=row>q08</th><td> 0.33</td><td>-0.05</td><td>-0.26</td><td> 0.35</td><td> 0.27</td><td> 0.22</td><td> 0.30</td><td> 1.00</td></tr>
-</tbody>
-</table>
-</div></div>
-</div>
-<p>In a typical <strong>variance-covariance matrix</strong>, the diagonals constitute the variances of the item and the off-diagonals the covariances. The interpretation of the correlation table are the standardized covariances between a pair of items, equivalent to running covariances on the Z-scores of each item. In a correlation table, the diagonal elements are always one because an item is always perfectly correlated with itself. Recall that the <strong>magnitude</strong> of a correlation <span class="math notranslate nohighlight">\(|r|\)</span> is determined by the absolute value of the correlation. From this table we can see that most items have magnitudes ranging from 0.38 for Items 3 and 7 to 0.51 for Items 6 and 7. Notice that the correlations in the upper right triangle are the same as those in the lower right triangle, meaning the correlation for Items 6 and 7 is the same as the correlation for Items 7 and 6. This property is known as <strong>symmetry</strong> and will be important later on.</p>
-<p>In psychology and the social sciences, the magnitude of a <a class="reference external" href="https://www.simplypsychology.org/effect-size.html">correlation above <strong>0.30</strong></a> is considered a medium effect size. Due to relatively high correlations among many of the items, this would be a good candidate for factor analysis. The goal of factor analysis is to model the interrelationships between many items with fewer unobserved or latent variables. Before we move on, let’s understand the confirmatory factor analysis model.</p>
-</section>
-<section id="the-factor-analysis-model">
-<h2><span class="section-number">1.5. </span>The factor analysis model<a class="headerlink" href="#the-factor-analysis-model" title="Permalink to this heading">#</a></h2>
-<p>The factor analysis or <strong>measurement model</strong> is essentially a linear regression model where the main predictor, the factor, is <strong>latent or unobserved</strong>. For a single subject, the simple linear regression equation is defined as:</p>
-<div class="math notranslate nohighlight">
-\[
-    y = b_0 + b_1 x +\epsilon
-\]</div>
-<p>where <span class="math notranslate nohighlight">\(b_0\)</span> is the intercept and <span class="math notranslate nohighlight">\(b_1\)</span> is the coefficient and <span class="math notranslate nohighlight">\(x\)</span> is an observed predictor. Similarly, for a single item, the factor analysis model is:</p>
-<div class="math notranslate nohighlight">
-\[
-    y_1 = \tau_1 + \lambda_1 \eta + \epsilon_1
-\]</div>
-<p>where is <span class="math notranslate nohighlight">\(\tau_1\)</span> the intercept of the first item and <span class="math notranslate nohighlight">\(\lambda_1\)</span> is the loading or regression weight of the first factor on the first item, and <span class="math notranslate nohighlight">\(\epsilon_1\)</span> is the residual for the first item. There are three main differences between the factor analysis model and linear regression:</p>
-<ol class="arabic simple">
-<li><p>Factor analysis outcomes are items not observations, so <span class="math notranslate nohighlight">\(y_1\)</span> indicates the first item.</p></li>
-<li><p>Factor analysis is a multivariate model there are as many outcomes per subject as there are items. In a linear regression, there is only one outcome per subject.</p></li>
-<li><p>The predictor or factor,<span class="math notranslate nohighlight">\(\eta\)</span> (“eta”), is unobserved whereas in a linear regression the predictors are observed.</p></li>
-</ol>
-</section>
+<p>see <a class="reference external" href="https://stats.oarc.ucla.edu/r/seminars/rcfa/">Confirmatory Factor Analysis (CFA) in R with lavaan</a></p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -540,16 +376,16 @@ run covariances on the items which is not possible with factor variables.</p>
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "r"
+            mode: "python"
         },
         kernelOptions: {
-            name: "ir",
+            name: "python3",
             path: "./notes\stat_infer"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'ir'</script>
+    <script>kernelName = 'python3'</script>
 
                 </article>
               
@@ -580,24 +416,6 @@ run covariances on the items which is not possible with factor variables.</p>
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose">1.1. Purpose</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements">1.2. Requirements</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">1.3. Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivating-example-spss-anxiety-questionnaire-saq-8">1.4. Motivating example: SPSS Anxiety Questionnaire (SAQ-8)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-factor-analysis-model">1.5. The factor analysis model</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
