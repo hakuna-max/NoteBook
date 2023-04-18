@@ -15,4 +15,4 @@ parts:
   - caption: Buffer
     numbered: 3
     chapters:
-    - file: notes/stat_infer/CFA in R with Lavaan.ipynb
+    - file: notes/stat_infer/CFA in R with Lavaan.md
