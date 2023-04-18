@@ -401,8 +401,20 @@ document.write(`
 <p>Please also make sure to have the following R packages installed, and if not, run these commands in R (RStudio).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;foreign&quot;</span><span class="p">,</span> <span class="n">dependencies</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
-<span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;lavaan&quot;</span><span class="p">,</span> <span class="n">dependencies</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;lavaan&quot;</span><span class="p">,</span> <span class="n">dependencies</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing package into &#39;C:/Users/rolfz/AppData/Local/R/win-library/4.2&#39;
+(as &#39;lib&#39; is unspecified)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>package &#39;lavaan&#39; successfully unpacked and MD5 sums checked
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The downloaded binary packages are in
+	C:\Users\rolfz\AppData\Local\Temp\RtmpcNoFxi\downloaded_packages
 </pre></div>
 </div>
 </div>
@@ -412,6 +424,12 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">foreign</span><span class="p">)</span> 
 <span class="nf">library</span><span class="p">(</span><span class="n">lavaan</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This is lavaan 0.6-15
+lavaan is FREE software! Please report any bugs.
 </pre></div>
 </div>
 </div>
@@ -470,6 +488,24 @@ run covariances on the items which is not possible with factor variables.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A matrix: 8 × 8 of type dbl</caption>
+<thead>
+	<tr><th></th><th scope=col>q01</th><th scope=col>q02</th><th scope=col>q03</th><th scope=col>q04</th><th scope=col>q05</th><th scope=col>q06</th><th scope=col>q07</th><th scope=col>q08</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>q01</th><td> 1.00</td><td>-0.10</td><td>-0.34</td><td> 0.44</td><td> 0.40</td><td> 0.22</td><td> 0.31</td><td> 0.33</td></tr>
+	<tr><th scope=row>q02</th><td>-0.10</td><td> 1.00</td><td> 0.32</td><td>-0.11</td><td>-0.12</td><td>-0.07</td><td>-0.16</td><td>-0.05</td></tr>
+	<tr><th scope=row>q03</th><td>-0.34</td><td> 0.32</td><td> 1.00</td><td>-0.38</td><td>-0.31</td><td>-0.23</td><td>-0.38</td><td>-0.26</td></tr>
+	<tr><th scope=row>q04</th><td> 0.44</td><td>-0.11</td><td>-0.38</td><td> 1.00</td><td> 0.40</td><td> 0.28</td><td> 0.41</td><td> 0.35</td></tr>
+	<tr><th scope=row>q05</th><td> 0.40</td><td>-0.12</td><td>-0.31</td><td> 0.40</td><td> 1.00</td><td> 0.26</td><td> 0.34</td><td> 0.27</td></tr>
+	<tr><th scope=row>q06</th><td> 0.22</td><td>-0.07</td><td>-0.23</td><td> 0.28</td><td> 0.26</td><td> 1.00</td><td> 0.51</td><td> 0.22</td></tr>
+	<tr><th scope=row>q07</th><td> 0.31</td><td>-0.16</td><td>-0.38</td><td> 0.41</td><td> 0.34</td><td> 0.51</td><td> 1.00</td><td> 0.30</td></tr>
+	<tr><th scope=row>q08</th><td> 0.33</td><td>-0.05</td><td>-0.26</td><td> 0.35</td><td> 0.27</td><td> 0.22</td><td> 0.30</td><td> 1.00</td></tr>
+</tbody>
+</table>
+</div></div>
 </div>
 <p>In a typical <strong>variance-covariance matrix</strong>, the diagonals constitute the variances of the item and the off-diagonals the covariances. The interpretation of the correlation table are the standardized covariances between a pair of items, equivalent to running covariances on the Z-scores of each item. In a correlation table, the diagonal elements are always one because an item is always perfectly correlated with itself. Recall that the <strong>magnitude</strong> of a correlation <span class="math notranslate nohighlight">\(|r|\)</span> is determined by the absolute value of the correlation. From this table we can see that most items have magnitudes ranging from 0.38 for Items 3 and 7 to 0.51 for Items 6 and 7. Notice that the correlations in the upper right triangle are the same as those in the lower right triangle, meaning the correlation for Items 6 and 7 is the same as the correlation for Items 7 and 6. This property is known as <strong>symmetry</strong> and will be important later on.</p>
 <p>In psychology and the social sciences, the magnitude of a <a class="reference external" href="https://www.simplypsychology.org/effect-size.html">correlation above <strong>0.30</strong></a> is considered a medium effect size. Due to relatively high correlations among many of the items, this would be a good candidate for factor analysis. The goal of factor analysis is to model the interrelationships between many items with fewer unobserved or latent variables. Before we move on, let’s understand the confirmatory factor analysis model.</p>
@@ -508,7 +544,7 @@ run covariances on the items which is not possible with factor variables.</p>
         },
         kernelOptions: {
             name: "ir",
-            path: "./notes/stat_infer"
+            path: "./notes\stat_infer"
         },
         predefinedOutput: true
     }
